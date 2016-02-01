@@ -4,12 +4,18 @@ title: About
 permalink: /about/
 ---
 
-Some information about you!
+Hi, I'm Matthew. I enjoy rockclimbing, getting outdoors, and eating delicious food. 
+
+I also like navigating complicated data landscapes, and using analysis to get to the bottom of things.
+
+Currently, I'm an Insight fellow for data science. I've done a project analyzing Parkinson's disease patient progress with a mobile app, which you can see here: <<<<insert hyperlink>>>
+
+
 
 ### More Information
 
-A place to include any other types of information that you'd like to include about yourself.
+Check out my blog from living in Israel: <<<insert link>>>
 
 ### Contact me
 
-[email@domain.com](mailto:email@domain.com)
+[mattoby@gmail.com](mailto:mattoby@gmail.com)
