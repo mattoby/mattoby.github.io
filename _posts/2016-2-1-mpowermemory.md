@@ -16,11 +16,15 @@ In consultation with Sage, I have done an [Insight Data Science](http://insightd
 
 The mPower mobile app was designed by Sage Bionetworks to track disease progress in Parkinson's patients. Patients download the app, and then are prompted occasionally to complete certain tasks that track how they are doing. These tasks include a walking gait test, a voice test, and others. Data from the tasks is collected and stored in a database intended for use by researchers, and is part of a broader mission to improve disease tracking in Parkinson's between doctor visits. In the future, if a patient's medicine is not working, the app may signal them that they should see their doctor. This is the promise and mission of Sage that is being carried out through this clinical trial. 
 
+One of the tests within the mPower app is a memory game, which intends to track how the memory of Parkinson's patients varies on a day-to-day basis. The memory app looks like this:
+
+![mpowerappface.png]({{site.baseurl}}/images/mpowerappface.png)!
+
 The intent is to change how patients are  and hopefully to be predictive of medical status so that 
 
 in collaboration with Apple, using the Apple HealthKit, a a The focus of my analysis is a game within the mPower iphone app, which tracks 
 
-![mpowerappface.png]({{site.baseurl}}/images/mpowerappface.png)!
+
 
 ![confusion_randforest_resampled1.png]({{site.baseurl}}/images/confusion_randforest_resampled1.png)
 ![park_nopark_resample2_agehist.png]({{site.baseurl}}/images/park_nopark_resample2_agehist.png)
