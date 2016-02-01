@@ -14,7 +14,7 @@ Sage Bionetworks has teamed up with Apple in a project called [mPower](http://pa
 
 In consultation with Sage, I have done an [Insight Data Science](http://insightdatascience.com/ "Insight Data Science") project analyzing data from this mobile app. The results of this analysis can be found in this blog.
 
-![feature_dist_matrix_with16.png]({{ site.baseurl }}/images/config.png)
+![feature_dist_matrix_with16.pngAAH]({{ site.baseurl }}/images/config.png)
 
 
 ![parkvsage.png]({{site.baseurl}}/_posts/parkvsage.png)
