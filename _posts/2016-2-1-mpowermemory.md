@@ -11,9 +11,7 @@ Healthcare is changing rapidly. The old model of tracking patients with sporadic
 
 Sage Bionetworks has teamed up with Apple in a project called [mPower](http://parkinsonmpower.org/ "Mpower Parkinson's Site"), intended to produce apps to track different diseases, in the hopes of overhauling the model of healthcare tracking and move it to a more dynamic system commesurate with today's hi-tech world. 
 
-
-
-In consultation with Sage, I have done an Insight Data Sciences project analyzing data from this mobile app. The results of this analysis can be found in this blog.
+In consultation with Sage, I have done an [Insight Data Sciences](http://insightdatascience.com/ "Insight Data Science") project analyzing data from this mobile app. The results of this analysis can be found in this blog.
 
 
 blablabla Next you can update your site name, avatar and other options using the _config.yml file in the root of your repository (shown below)
