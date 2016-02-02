@@ -14,11 +14,15 @@ In consultation with Sage, I have done an [Insight Data Science](http://insightd
 
 ##  The mPower memory test
 
-The mPower mobile app was designed by Sage Bionetworks to track disease progress in Parkinson's patients. Patients download the app, and then are prompted occasionally to complete certain tasks that track how they are doing. These tasks include a walking gait test, a voice test, and others. Data from the tasks is collected and stored in a database intended for use by researchers, and is part of a broader mission to improve disease tracking in Parkinson's between doctor visits. In the future, if a patient's medicine is not working, the app may signal them that they should see their doctor. This is the promise and mission of Sage that is being carried out through this clinical trial. 
+The mPower mobile app was designed by Sage Bionetworks to track disease progress in Parkinson's patients. Patients download the app, and then are prompted occasionally to complete certain tasks that track how they are doing. These tasks include a walking gait test, a vocal test, and others. Data from the tasks are collected and stored in a database intended for use by researchers, and become part of a broader mission to improve disease tracking in Parkinson's between doctor visits. In the future, if a patient's medicine is not working, the app may signal them that they should see their doctor. 
 
 One of the tests within the mPower app is a memory game, which intends to track how the memory of Parkinson's patients varies on a day-to-day basis. The memory app looks like this:
 
-![mpowerappface.png]({{site.baseurl}}/images/mpowerappface.png)!
+
+![mpowerappface.png]({{site.baseurl}}/images/mpowerappface.png)
+
+
+First, the user is prompted about whether they recently took their Parkinson's medication. Patients can thus be classed into those at their 'best' (just took meds), vs. those at their 'worst' (immediately before taking medication). Then, a 3x3 grid of flowers will appear on the screen, and will light up in a randomized order. After that's done, the user is tasked with touching the flowers in the same order they lit up. If they do poorly, the app reduces the number of flowers to a 2x2 grid. If they do well, then the complexity increases to a 4x4 grid. 
 
 The intent is to change how patients are  and hopefully to be predictive of medical status so that 
 
@@ -31,7 +35,7 @@ in collaboration with Apple, using the Apple HealthKit, a a The focus of my anal
 ![park_nopark_resample1_agehist.png]({{site.baseurl}}/images/park_nopark_resample1_agehist.png)
 ![park_nopark_scorehist.png]({{site.baseurl}}/images/park_nopark_scorehist.png)
 ![park_nopark_agehist.png]({{site.baseurl}}/images/park_nopark_agehist.png)
-[sage.png]({{site.baseurl}}/images/sage.png)
+![sage.png]({{site.baseurl}}/images/sage.png)
 
 
 
