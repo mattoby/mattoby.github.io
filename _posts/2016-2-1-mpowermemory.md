@@ -28,7 +28,9 @@ The game gets quite hard when it gets into 4x4 mode, and you have to track 3, th
 
 Memory is affected in Parkinson's, but usually in late stages of the disease. The more common symptoms, which affect nearly all Parkinson's patients, all involve degradation of motor abilities. Motor symptoms of Parkinson's include tremors, slowness of movement, rigidity, and instability in walking and balancing. Since these symptoms are more ubiquitious among patients than memory issues, it is unclear if a test of memory will be informative. Fortunately, the records from the memory game include data that might give a hint into motor issues aside from memory issues, with a bit of clever feature engineering. 
 
-The game outputs a 'game score', which is intended to assess memory. In the raw records from gameplays, I 
+##  Feature engineering to get juice from the memory test
+
+The game outputs a 'game score', which is intended to assess memory. In the raw records from gameplays, I had access to the regions considered 'correct' to touch for each flower, the order in which the flowers lit up, and the location and time of each touch by the user. I modeled these data as shown in the figure, calculating from these raw data the distance between each 'successful' touch and the center of the flower. This 'touch distance' might indicate an inability of users to hold their hands steady. I also extracted the timing of touches, which I split into two types of features. First, I tracked the time before first touch in each game, i.e., the latency. Next, I averaged the time between each pair of touches after the first one, for a mean touch delay. I aggregated these features separately for plays of the 2x2 game, the 3x3 game, and the 4x4 game, since they differ considerably in difficulty. These features, along with the game score, formed my feature set for predicting the health status of people who played the memory game.
 
 ![memory_app_game_explanation.png]({{site.baseurl}}/images/memory_app_game_explanation.png)
 
