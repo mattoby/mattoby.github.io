@@ -40,6 +40,7 @@ The first thing I did is looked at how the memory game score correlates with use
 
 ![park_nopark_scorehist.png]({{site.baseurl}}/images/park_nopark_scorehist.png)
 
+This is true even in context of age, which is a major confounding factor. # plot score vs age density histogram
 
 ![park_nopark_agehist.png]({{site.baseurl}}/images/park_nopark_agehist.png)
 
