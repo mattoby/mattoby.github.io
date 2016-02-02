@@ -26,7 +26,9 @@ The game gets quite hard when it gets into 4x4 mode, and you have to track 3, th
 
 ##  What can a memory test tell us about Parkinson's?
 
-Memory is affected in Parkinson's, but usually in late stages of the disease. Much sooner come 
+Memory is affected in Parkinson's, but usually in late stages of the disease. The more common symptoms, which affect nearly all Parkinson's patients, all involve degradation of motor abilities. Motor symptoms of Parkinson's include tremors, slowness of movement, rigidity, and instability in walking and balancing. Since these symptoms are more ubiquitious among patients than memory issues, it is unclear if a test of memory will be informative. Fortunately, the records from the memory game include rom I was suspicious about the ability of the memory per se to test test 'game score', which is designed to The memory test has the potential to track some of these issues , so I suspected that The memory test outputs a 
+
+##  What the data look like
 
 
 ![confusion_randforest_resampled1.png]({{site.baseurl}}/images/confusion_randforest_resampled1.png)
@@ -42,6 +44,7 @@ Memory is affected in Parkinson's, but usually in late stages of the disease. Mu
 
 
 fin
+
 Partnering with ![sage_logo.jpg]({{site.baseurl}}/images/sage_logo.jpg) and ![mpowerparkinsons.svg]({{site.baseurl}}/images/mpowerparkinsons.svg) mPower
 
 
