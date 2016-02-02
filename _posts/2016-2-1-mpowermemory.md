@@ -18,11 +18,11 @@ The mPower mobile app was designed by Sage Bionetworks, using the apple Research
 
 One of the tests within the mPower app is a memory game, which intends to track how the memory of Parkinson's patients varies on a day-to-day basis. The memory app looks like this:
 
-
 ![mpowerappface.png]({{site.baseurl}}/images/mpowerappface.png)
-### mPower memory test
 
-First, the user is prompted about whether they recently took their Parkinson's medication. Patients can thus be classed into those at their 'best' (just took meds), vs. those at their 'worst' (immediately before taking medication). Then, a 3x3 grid of flowers will appear on the screen, and will light up in a randomized order. After that's done, the user is tasked with touching the flowers in the same order they lit up. If they do poorly, the app reduces the number of flowers to a 2x2 grid. If they do well, then the complexity increases to a 4x4 grid. 
+First, the user is prompted about whether they recently took their Parkinson's medication. Patients can thus be classed into those at their 'best' (just took meds), vs. those at their 'worst' (immediately before taking medication). Then, a 3x3 grid of flowers appears on the screen, and the flowers light up in a randomized order. FInally, the user is tasked with touching the flowers in the same order they lit up. If they do poorly, the app reduces the number of flowers to a 2x2 grid. If they do well, then the complexity increases to a 4x4 grid. If they continue to do well, the number of flowers they have to remember that lit up also increases. The app is hard when it gets into 4x4 mode, and you have to track 3, then 4, then 5 flowers. Don't take my word for it -- if you have an iphone, you can [try it yourself](https://itunes.apple.com/us/app/parkinson-mpower-study-app/id972191200?mt=8 "mpower on itunes").
+
+
 
 The intent is to change how patients are  and hopefully to be predictive of medical status so that 
 
