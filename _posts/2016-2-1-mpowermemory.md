@@ -26,7 +26,7 @@ The game gets quite hard when it gets into 4x4 mode, and you have to track 3, th
 
 ##  What can a memory test tell us about Parkinson's?
 
-
+Memory is affected in Parkinson's, but usually in late stages of the disease. Much sooner come 
 
 
 ![confusion_randforest_resampled1.png]({{site.baseurl}}/images/confusion_randforest_resampled1.png)
@@ -37,6 +37,7 @@ The game gets quite hard when it gets into 4x4 mode, and you have to track 3, th
 ![sage.png]({{site.baseurl}}/images/sage.png)
 
 
+![mpowerparkinsons.svg]({{site.baseurl}}/images/mpowerparkinsons.svg)
 
 
 
