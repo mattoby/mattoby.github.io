@@ -6,9 +6,8 @@ published: true
 
 
 
-Healthcare is changing rapidly. The old model of tracking patients with sporadic doctor's visits is becoming antiquated with the enormous innovations in constant available through the internet, social media, and mobile phone technology, that are driving other fields. These platforms are only now being adopted for tracking patient wellness, but are rapidly meeting the expectations through initiatives such as the Apple care kit, which was published last year. 
 
-![patient3_scorevslatency.png]({{site.baseurl}}/images/patient3_scorevslatency.png)
+Healthcare is changing rapidly. The old model of tracking patients with sporadic doctor's visits is becoming antiquated with the enormous innovations in constant available through the internet, social media, and mobile phone technology, that are driving other fields. These platforms are only now being adopted for tracking patient wellness, but are rapidly meeting the expectations through initiatives such as the Apple care kit, which was published last year. 
 
 Sage Bionetworks has teamed up with Apple in using their [iphone ResearchKit](http://www.apple.com/researchkit/ "iphone researchkit") to in a project called [mPower](http://parkinsonmpower.org/ "Mpower Parkinson's Site"), intended to produce apps to track different diseases, in the hopes of overhauling the model of healthcare tracking and move it to a more dynamic system commesurate with today's hi-tech world. 
 
@@ -59,8 +58,3 @@ This is true even in context of age, which is a major confounding factor. # plot
 
 
 Partnered with ![sage_logo.jpg]({{site.baseurl}}/images/sage_logo.jpg) and ![mpowerparkinsons.svg]({{site.baseurl}}/images/mpowerparkinsons.svg) mPower
-
-
-
-
-
