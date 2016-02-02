@@ -20,7 +20,7 @@ One of the tests within the mPower app is a memory game, which intends to track 
 
 
 ![mpowerappface.png]({{site.baseurl}}/images/mpowerappface.png)
-#### mPower memory test
+### mPower memory test
 
 First, the user is prompted about whether they recently took their Parkinson's medication. Patients can thus be classed into those at their 'best' (just took meds), vs. those at their 'worst' (immediately before taking medication). Then, a 3x3 grid of flowers will appear on the screen, and will light up in a randomized order. After that's done, the user is tasked with touching the flowers in the same order they lit up. If they do poorly, the app reduces the number of flowers to a 2x2 grid. If they do well, then the complexity increases to a 4x4 grid. 
 
