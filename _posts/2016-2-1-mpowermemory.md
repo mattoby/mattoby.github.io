@@ -47,6 +47,7 @@ This is true even in context of age, which is a major confounding factor. # plot
 
 ![park_nopark_agehist.png]({{site.baseurl}}/images/park_nopark_agehist.png)
 
+![feature_importances.png]({{site.baseurl}}/images/feature_importances.png)
 
 ## For other researchers
 
