@@ -22,7 +22,7 @@ The mPower mobile app was designed by Sage Bionetworks, using the apple Research
 
 One of the tests within the mPower app is a memory game, which intends to track how the memory of Parkinson's patients varies on a day-to-day basis. The memory app looks like this:
 
-![mpowerappface.png]({{site.baseurl}}/images/mpowerappface.png)
+![memorygame1.png]({{site.baseurl}}/images/memorygame1.png)
 
 First, the user is prompted about whether they recently took their Parkinson's medication. Patients can thus be classed into those at their 'best' (just took meds), vs. those at their 'worst' (immediately before taking medication). Then, a 3x3 grid of flowers appears on the screen, and the flowers light up in a randomized order. FInally, the user is tasked with touching the flowers in the same order they lit up. If they do poorly, the app reduces the number of flowers to a 2x2 grid. If they do well, then the complexity increases to a 4x4 grid. If they continue to do well, the number of flowers they have to remember that lit up also increases. 
 
@@ -32,15 +32,17 @@ The game gets quite hard when it gets into 4x4 mode, and you have to track 3, th
 
 Memory is affected in Parkinson's, but usually in late stages of the disease. The more common symptoms, which affect nearly all Parkinson's patients, all involve degradation of motor abilities. Motor symptoms of Parkinson's include tremors, slowness of movement, rigidity, and instability in walking and balancing. Since these symptoms are more ubiquitious among patients than memory issues, it is unclear if a test of memory will be informative. Fortunately, the records from the memory game include data that might give a hint into motor issues aside from memory issues, with a bit of clever feature engineering. 
 
-![memorygame1.png]({{site.baseurl}}/images/memorygame1.png)
-![inthedata.png]({{site.baseurl}}/images/inthedata.png)
 
 ## Balancing age
 
 ![agehist1.png]({{site.baseurl}}/images/agehist1.png)
 ![agehist2.png]({{site.baseurl}}/images/agehist2.png)
 
-##  What the game score says
+##  Taking a look at the data
+
+blabla
+
+![inthedata.png]({{site.baseurl}}/images/inthedata.png)
 
 The first thing I did is looked at how the memory game score correlates with users having Parkinson's. It turned out, this score, taken alone, is entirely uninformative.
 
@@ -52,19 +54,15 @@ The game outputs a 'game score', which is intended to assess memory. In the raw 
 
 ![featureengineering.png]({{site.baseurl}}/images/featureengineering.png)
 
-
-
+##  Predicting Parkinson's with a random forest model
 
 ![model1_roc.png]({{site.baseurl}}/images/model1_roc.png)
+
 ![model1_stats.png]({{site.baseurl}}/images/model1_stats.png)
+
 ![model1_featureimportances.png]({{site.baseurl}}/images/model1_featureimportances.png)
 
 
-This is true even in context of age, which is a major confounding factor. # plot score vs age density histogram
-
-![park_nopark_agehist.png]({{site.baseurl}}/images/park_nopark_agehist.png)
-
-![feature_importances.png]({{site.baseurl}}/images/feature_importances.png)
 
 ## For other researchers
 
@@ -72,16 +70,6 @@ You can see all the code I used to do this analysis here:
 
 The data from the memory test is held in Synapse, Sage's web portal for data. Anyone can access it if they sign up for a Synapse account and go through a certification procedure. Once a user is certified, they can access the data from the memory test here: [mPowerSynapse](https://www.synapse.org/#!Synapse:syn4993293/wiki/ "mPower study data")
 
-![bacteriahungry.png]({{site.baseurl}}/images/bacteriahungry.png)
-
-
-
-
-![park_nopark_resample2_agehist.png]({{site.baseurl}}/images/park_nopark_resample2_agehist.png)
-![park_nopark_resample1_agehist.png]({{site.baseurl}}/images/park_nopark_resample1_agehist.png)
-![sage.png]({{site.baseurl}}/images/sage.png)
-
-![confusion_randforest_resampled1.png]({{site.baseurl}}/images/confusion_randforest_resampled1.png)
 
 
 Partnered with ![sage_logo.jpg]({{site.baseurl}}/images/sage_logo.jpg) and ![mpowerparkinsons.svg]({{site.baseurl}}/images/mpowerparkinsons.svg) mPower
