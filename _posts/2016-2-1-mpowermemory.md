@@ -9,6 +9,7 @@ published: true
 
 
 
+
 Healthcare is changing rapidly. The old model of tracking patients with sporadic doctor's visits is becoming antiquated with the enormous innovations in constant available through the internet, social media, and mobile phone technology, that are driving other fields. These platforms are only now being adopted for tracking patient wellness, but are rapidly meeting the expectations through initiatives such as the Apple ResearchKit, which was published last year. 
 
 Sage Bionetworks has teamed up with Apple in using their [iphone ResearchKit](http://www.apple.com/researchkit/ "iphone researchkit") to in a project called [mPower](http://parkinsonmpower.org/ "Mpower Parkinson's Site"), intended to produce apps to track different diseases, in the hopes of overhauling the model of healthcare tracking and move it to a more dynamic system commesurate with today's hi-tech world. 
@@ -31,17 +32,33 @@ The game gets quite hard when it gets into 4x4 mode, and you have to track 3, th
 
 Memory is affected in Parkinson's, but usually in late stages of the disease. The more common symptoms, which affect nearly all Parkinson's patients, all involve degradation of motor abilities. Motor symptoms of Parkinson's include tremors, slowness of movement, rigidity, and instability in walking and balancing. Since these symptoms are more ubiquitious among patients than memory issues, it is unclear if a test of memory will be informative. Fortunately, the records from the memory game include data that might give a hint into motor issues aside from memory issues, with a bit of clever feature engineering. 
 
-##  Feature engineering, i.e., squeezing juice from the app
+![memorygame1.png]({{site.baseurl}}/images/memorygame1.png)
+![inthedata.png]({{site.baseurl}}/images/inthedata.png)
 
-The game outputs a 'game score', which is intended to assess memory. In the raw records from gameplays, I had access to the regions considered 'correct' to touch for each flower, the order in which the flowers lit up, and the location and time of each touch by the user. I modeled these data as shown in the figure, calculating from these raw data the distance between each 'successful' touch and the center of the flower. This 'touch distance' might indicate an inability of users to hold their hands steady. I also extracted the timing of touches, which I split into two types of features. First, I tracked the time before first touch in each game, i.e., the latency. Next, I averaged the time between each pair of touches after the first one, for a mean touch delay. I aggregated these features separately for plays of the 2x2 game, the 3x3 game, and the 4x4 game, since they differ considerably in difficulty. These features, along with the game score, formed my feature set for predicting the health status of people who played the memory game.
+## Balancing age
 
-![memory_app_game_explanation.png]({{site.baseurl}}/images/memory_app_game_explanation.png)
+![agehist1.png]({{site.baseurl}}/images/agehist1.png)
+![agehist2.png]({{site.baseurl}}/images/agehist2.png)
 
 ##  What the game score says
 
 The first thing I did is looked at how the memory game score correlates with users having Parkinson's. It turned out, this score, taken alone, is entirely uninformative.
 
-![park_nopark_scorehist.png]({{site.baseurl}}/images/park_nopark_scorehist.png)
+![gamescorehist.png]({{site.baseurl}}/images/gamescorehist.png)
+
+##  Feature engineering, i.e., squeezing juice from the app
+
+The game outputs a 'game score', which is intended to assess memory. In the raw records from gameplays, I had access to the regions considered 'correct' to touch for each flower, the order in which the flowers lit up, and the location and time of each touch by the user. I modeled these data as shown in the figure, calculating from these raw data the distance between each 'successful' touch and the center of the flower. This 'touch distance' might indicate an inability of users to hold their hands steady. I also extracted the timing of touches, which I split into two types of features. First, I tracked the time before first touch in each game, i.e., the latency. Next, I averaged the time between each pair of touches after the first one, for a mean touch delay. I aggregated these features separately for plays of the 2x2 game, the 3x3 game, and the 4x4 game, since they differ considerably in difficulty. These features, along with the game score, formed my feature set for predicting the health status of people who played the memory game.
+
+![featureengineering.png]({{site.baseurl}}/images/featureengineering.png)
+
+
+
+
+![model1_roc.png]({{site.baseurl}}/images/model1_roc.png)
+![model1_stats.png]({{site.baseurl}}/images/model1_stats.png)
+![model1_featureimportances.png]({{site.baseurl}}/images/model1_featureimportances.png)
+
 
 This is true even in context of age, which is a major confounding factor. # plot score vs age density histogram
 
