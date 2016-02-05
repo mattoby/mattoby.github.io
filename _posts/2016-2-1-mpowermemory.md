@@ -35,8 +35,7 @@ Memory is affected in Parkinson's, but usually in late stages of the disease. Th
 
 ## Balancing age
 
-![agehist1.png]({{site.baseurl}}/images/agehist1.png)
-![agehist2.png]({{site.baseurl}}/images/agehist2.png)
+![age_resampling_and_balancing.png]({{site.baseurl}}/images/age_resampling_and_balancing.png)
 
 ##  Taking a look at the data
 
