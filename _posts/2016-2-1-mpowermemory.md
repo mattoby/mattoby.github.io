@@ -42,7 +42,7 @@ Memory is affected in Parkinson's, but usually in late stages of the disease. Th
 
 blabla
 
-![inthedata.png]({{site.baseurl}}/images/inthedata.png)
+![inthedata1.png]({{site.baseurl}}/images/inthedata1.png)
 
 The first thing I did is looked at how the memory game score correlates with users having Parkinson's. It turned out, this score, taken alone, is entirely uninformative.
 
@@ -52,7 +52,7 @@ The first thing I did is looked at how the memory game score correlates with use
 
 The game outputs a 'game score', which is intended to assess memory. In the raw records from gameplays, I had access to the regions considered 'correct' to touch for each flower, the order in which the flowers lit up, and the location and time of each touch by the user. I modeled these data as shown in the figure, calculating from these raw data the distance between each 'successful' touch and the center of the flower. This 'touch distance' might indicate an inability of users to hold their hands steady. I also extracted the timing of touches, which I split into two types of features. First, I tracked the time before first touch in each game, i.e., the latency. Next, I averaged the time between each pair of touches after the first one, for a mean touch delay. I aggregated these features separately for plays of the 2x2 game, the 3x3 game, and the 4x4 game, since they differ considerably in difficulty. These features, along with the game score, formed my feature set for predicting the health status of people who played the memory game.
 
-![featureengineering.png]({{site.baseurl}}/images/featureengineering.png)
+![featureengineering1.png]({{site.baseurl}}/images/featureengineering1.png)
 
 ##  Predicting Parkinson's with a random forest model
 
