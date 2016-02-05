@@ -32,20 +32,20 @@ The game gets quite hard when it gets into 4x4 mode, and you have to track 3, th
 
 Memory is affected in Parkinson's, but usually in late stages of the disease. The more common symptoms, which affect nearly all Parkinson's patients, all involve degradation of motor abilities. Motor symptoms of Parkinson's include tremors, slowness of movement, rigidity, and instability in walking and balancing. Since these symptoms are more ubiquitious among patients than memory issues, it is unclear if a test of memory will be informative. Fortunately, the records from the memory game include data that might give a hint into motor issues aside from memory issues, with a bit of clever feature engineering. 
 
-
-## Balancing age
-
-![agehists.png]({{site.baseurl}}/images/agehists.png)
-
 ##  Taking a look at the data
 
-blabla
+The first thing I did was take a look at the data, and 
 
 ![inthedata1.png]({{site.baseurl}}/images/inthedata1.png)
 
 The first thing I did is looked at how the memory game score correlates with users having Parkinson's. It turned out, this score, taken alone, is entirely uninformative.
 
 ![gamescorehist.png]({{site.baseurl}}/images/gamescorehist.png)
+
+## Balancing age
+
+![agehist3.png]({{site.baseurl}}/images/agehist3.png)
+
 
 ##  Feature engineering, i.e., squeezing juice from the app
 
