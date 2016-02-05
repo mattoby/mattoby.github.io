@@ -10,9 +10,9 @@ published: true
 
 
 
-Healthcare is changing rapidly. The old model of tracking patients with sporadic doctor's visits is becoming antiquated with the enormous innovations in constant available through the internet, social media, and mobile phone technology, that are driving other fields. These platforms are only now being adopted for tracking patient wellness, but are rapidly meeting the expectations through initiatives such as the Apple ResearchKit, which was published last year. 
+Healthcare is changing rapidly. The old model of tracking patients with sporadic doctor's visits is becoming antiquated with the enormous innovations through the internet, social media, and mobile phone technology, which are driving massive change in other fields. These platforms are only now being adopted for tracking patient wellness, but are rapidly meeting the expectations through initiatives such as the Apple ResearchKit, which was published last year. 
 
-Sage Bionetworks has teamed up with Apple in using their [iphone ResearchKit](http://www.apple.com/researchkit/ "iphone researchkit") to in a project called [mPower](http://parkinsonmpower.org/ "Mpower Parkinson's Site"), intended to produce apps to track different diseases, in the hopes of overhauling the model of healthcare tracking and move it to a more dynamic system commesurate with today's hi-tech world. 
+Using the new [Apple ResearchKit](http://www.apple.com/researchkit/ "iphone researchkit") technology, Sage Bionetworks has initiated a project called [mPower](http://parkinsonmpower.org/ "Mpower Parkinson's Site"), intended to produce apps to track different diseases, in the hopes of overhauling the model of healthcare tracking and move it to a more dynamic system commesurate with today's hi-tech world. 
 
 In consultation with Sage, I have done an [Insight Data Science](http://insightdatascience.com/ "Insight Data Science") project analyzing data from this mobile app. This analysis is the focus of this blog.
 
@@ -35,7 +35,7 @@ Memory is affected in Parkinson's, but usually in late stages of the disease. Th
 
 ## Balancing age
 
-![age_resampling_and_balancing.png]({{site.baseurl}}/images/age_resampling_and_balancing.png)
+![agehists.png]({{site.baseurl}}/images/agehists.png)
 
 ##  Taking a look at the data
 
