@@ -38,14 +38,13 @@ Memory is affected in Parkinson's, but usually in late stages of the disease. Th
 
 ##  A peek at the data
 
-The mPower app is available for anybody to download and use, and to use as often as they wish. As a result, unlike in a controlled clinical trial, there are no restrictions on the number of times a user may play the memory game. 
+The mPower app is available for anybody to download and use, and to use as often as they wish. As a result, unlike in a controlled clinical trial, there are no restrictions on the number of times a user may play the memory game. Therefore, many users played the memory game only once or twice, while a few users played it dozens or hundreds of times. These highly uneven distributions can be seen in the plots below:
 
 
 ![numrecords_park_nopark_2.png]({{site.baseurl}}/images/numrecords_park_nopark_2.png)
 
 
-
-As the plots above show, many users played the memory game only once or twice, while a few users played it dozens or hundreds of times. This uneven distribution led to many challenges in data analysis that had to be overcome to make meaningful predictions.
+Dealing with these distributions led to many challenges in data analysis. 
 
 ![inthedata1.png]({{site.baseurl}}/images/inthedata1.png)
 
