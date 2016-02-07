@@ -36,12 +36,13 @@ The game gets quite hard when it gets into 4x4 mode, and you have to track 3, th
 
 Memory is affected in Parkinson's, but usually in late stages of the disease. The more common symptoms, which affect nearly all Parkinson's patients, all involve degradation of motor abilities. Motor symptoms of Parkinson's include tremors, slowness of movement, rigidity, and instability in walking and balancing. Since these symptoms are more ubiquitious among patients than memory issues, it is unclear if a test of memory will be informative. Fortunately, the records from the memory game include data that might give a hint into motor issues aside from memory issues, with a bit of clever feature engineering. 
 
-##  Taking a look at the data
+##  A peek at the data
 
-The mPower app is available for anybody to download and use. As a result, unlike in a controlled clinical trial, there are no restrictions on the number of times each user plays the memory game. As a result of this, many users played the memory game only once or twice, while a few users played it dozens or hundreds of times:
+The mPower app is available for anybody to download and use, and to use as often as they wish. As a result, unlike in a controlled clinical trial, there are no restrictions on the number of times a user may play the memory game. 
 
 ![numrecords_park_nopark.png]({{site.baseurl}}/images/numrecords_park_nopark.png)
 
+As the plots above show, many users played the memory game only once or twice, while a few users played it dozens or hundreds of times. This uneven distribution led to many challenges in data analysis that had to be overcome to make meaningful predictions.
 
 ![inthedata1.png]({{site.baseurl}}/images/inthedata1.png)
 
