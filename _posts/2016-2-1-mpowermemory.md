@@ -10,7 +10,8 @@ published: true
 
 
 
-Healthcare is changing rapidly. The old model of tracking patients with sporadic doctor's visits is becoming antiquated with the enormous innovations through the internet, social media, and mobile phone technology, which are driving massive change in other fields. These platforms are only now being adopted for tracking patient wellness, but are rapidly meeting the expectations through initiatives such as the Apple ResearchKit, which was published last year. 
+
+Healthcare is changing rapidly. The old model of tracking patients through sporadic doctor's visits is becoming antiquated with the enormous innovations in social media, mobile phone technology, and integration of data that have transformed so many fields. These platforms are only now being adopted for tracking patient wellness, but are rapidly meeting the expectations through initiatives such as the Apple ResearchKit, which was published last year. 
 
 Using the new [Apple ResearchKit](http://www.apple.com/researchkit/ "iphone researchkit") technology, Sage Bionetworks has initiated a project called [mPower](http://parkinsonmpower.org/ "Mpower Parkinson's Site"), intended to produce apps to track different diseases, in the hopes of overhauling the model of healthcare tracking and move it to a more dynamic system commesurate with today's hi-tech world. 
 
@@ -28,13 +29,19 @@ First, the user is prompted about whether they recently took their Parkinson's m
 
 The game gets quite hard when it gets into 4x4 mode, and you have to track 3, then 4, then 5 flowers. But don't take my word for it -- if you have an iphone, [try it yourself](https://itunes.apple.com/us/app/parkinson-mpower-study-app/id972191200?mt=8 "mpower on itunes"). It will be for a good cause. non-Parkinson's patients are important in this study too, as they provide a baseline for comparison. 
 
+
+
+
 ##  What can a memory test tell us about Parkinson's?
 
 Memory is affected in Parkinson's, but usually in late stages of the disease. The more common symptoms, which affect nearly all Parkinson's patients, all involve degradation of motor abilities. Motor symptoms of Parkinson's include tremors, slowness of movement, rigidity, and instability in walking and balancing. Since these symptoms are more ubiquitious among patients than memory issues, it is unclear if a test of memory will be informative. Fortunately, the records from the memory game include data that might give a hint into motor issues aside from memory issues, with a bit of clever feature engineering. 
 
 ##  Taking a look at the data
 
-The first thing I did was take a look at the data, and 
+The mPower app is available for anybody to download and use, and, unlike a controlled clinical trial, there are no restrictions on how many (or few) times a user must use it. Therefore, there is a wide range  
+
+![numrecords_park_nopark.png]({{site.baseurl}}/images/numrecords_park_nopark.png)
+
 
 ![inthedata1.png]({{site.baseurl}}/images/inthedata1.png)
 
@@ -61,7 +68,7 @@ The game outputs a 'game score', which is intended to assess memory. In the raw 
 
 ![model1_featureimportances.png]({{site.baseurl}}/images/model1_featureimportances.png)
 
-
+##  Challenges with uncontrolled sampling
 
 ## For other researchers
 
