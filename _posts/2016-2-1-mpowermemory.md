@@ -29,12 +29,13 @@ First, the user is prompted about whether they recently took their Parkinson's m
 
 The game gets quite hard when it gets into 4x4 mode, and you have to track 3, then 4, then 5 flowers. But don't take my word for it -- if you have an iphone, [try it yourself](https://itunes.apple.com/us/app/parkinson-mpower-study-app/id972191200?mt=8 "mpower on itunes"). It will be for a good cause. non-Parkinson's patients are important in this study too, as they provide a baseline for comparison. 
 
-
-
-
 ##  What can a memory test tell us about Parkinson's?
 
-Memory is affected in Parkinson's, but usually in late stages of the disease. The more common symptoms, which affect nearly all Parkinson's patients, all involve degradation of motor abilities. Motor symptoms of Parkinson's include tremors, slowness of movement, rigidity, and instability in walking and balancing. Since these symptoms are more ubiquitious among patients than memory issues, it is unclear if a test of memory will be informative. Fortunately, the records from the memory game include data that might give a hint into motor issues aside from memory issues, with a bit of clever feature engineering. 
+Memory is affected in Parkinson's, but usually in late stages of the disease. The more common symptoms, which affect nearly all Parkinson's patients, all involve degradation of motor abilities. Motor symptoms of Parkinson's include tremors, slowness of movement, rigidity, and instability in walking and balancing. Since these symptoms are more ubiquitious among patients than memory issues, it is unclear if a test of memory will be informative. Fortunately, the records from the memory game include data that might give a hint into motor issues aside from memory issues, with a bit of feature engineering. 
+
+##  The bottom line
+
+
 
 ##  A peek at the data
 
@@ -44,7 +45,9 @@ The mPower app is available for anybody to download and use, and to use as often
 ![numrecords_park_nopark_withrug.png]({{site.baseurl}}/images/numrecords_park_nopark_withrug.png)
 
 
-It was important to 
+It was important to account for these distributions in some way in order to get meaningful results from the data. For example, if I treated each game record as equal in my analyses, a single Parkinson's patient who played the memory game 300 times would have the same weight as 300 individuals who each played the game once. This discrepancy could strongly bias my results in unproductive ways. I handled this distribution issue by using only a single reading per user - either a single random record, or the average for that user over every time they played the memory game. 
+
+the recotaking the mean values of features reducing the records for each patient down to 
 
 
 ![inthedata1.png]({{site.baseurl}}/images/inthedata1.png)
@@ -58,9 +61,14 @@ The first thing I did is looked at how the memory game score correlates with use
 ![agehist3.png]({{site.baseurl}}/images/agehist3.png)
 
 
-##  Feature engineering, i.e., squeezing juice from the app
+##  Squeezing juice from the data
 
-The game outputs a 'game score', which is intended to assess memory. In the raw records from gameplays, I had access to the regions considered 'correct' to touch for each flower, the order in which the flowers lit up, and the location and time of each touch by the user. I modeled these data as shown in the figure, calculating from these raw data the distance between each 'successful' touch and the center of the flower. This 'touch distance' might indicate an inability of users to hold their hands steady. I also extracted the timing of touches, which I split into two types of features. First, I tracked the time before first touch in each game, i.e., the latency. Next, I averaged the time between each pair of touches after the first one, for a mean touch delay. I aggregated these features separately for plays of the 2x2 game, the 3x3 game, and the 4x4 game, since they differ considerably in difficulty. These features, along with the game score, formed my feature set for predicting the health status of people who played the memory game.
+
+The game outputs a 'game score', which is intended to assess memory. I also had access to some demographic data from patients and raw records from their plays of the memory game.
+
+![mpower_data.png]({{site.baseurl}}/images/mpower_data.png)
+
+In the raw gameplay records, I had access to the regions considered 'correct' to touch for each flower, the order in which the flowers lit up, and the location and time of each touch by the user. I modeled these data as shown in the figure, calculating from these raw data the distance between each 'successful' touch and the center of the flower. This 'touch distance' might indicate an inability of users to hold their hands steady. I also extracted the timing of touches, which I split into two types of features. First, I tracked the time before first touch in each game, i.e., the latency. Next, I averaged the time between each pair of touches after the first one, for a mean touch delay. I aggregated these features separately for plays of the 2x2 game, the 3x3 game, and the 4x4 game, since they differ considerably in difficulty. These features, along with the game score, formed my feature set for predicting the health status of people who played the memory game.
 
 ![featureengineering1.png]({{site.baseurl}}/images/featureengineering1.png)
 
