@@ -61,7 +61,7 @@ The first thing I did is looked at how the memory game score correlates with use
 ![agehist3.png]({{site.baseurl}}/images/agehist3.png)
 
 
-##  Squeezing juice from the memory data
+##  Feature engineering (i.e., squeezing juice from the memory data)
 
 
 The game outputs a 'game score', which is intended to assess memory. I also had access to some demographic data from patients and raw records from their plays of the memory game.
