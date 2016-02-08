@@ -122,7 +122,7 @@ This project was done as an Insight Data Science project in consultation with Sa
 
 ### 1. My code:
 
-All of the code I wrote for this project is available in my mpower_memory repo on github. The project was done 
+All of the code I wrote for this project is freely available in [my mpower_memory repo on github](github.com/mattoby/mpower_memory "mpower_memory repo"). I did the project using Python, with Pandas for data processing and Sci-kit learn for modeling.
 
 ### 2. A clean summary of my analysis:
 
