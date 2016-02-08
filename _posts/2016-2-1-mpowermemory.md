@@ -67,7 +67,8 @@ The first thing I did is looked at how the memory game score correlates with use
 The game outputs a 'game score', which is intended to assess memory. I also had access to some demographic data from patients and raw records from their plays of the memory game.
 
 
-![mpower_data.png]({{site.baseurl}}/images/mpower_data.png)
+![mpower_data_overview.png]({{site.baseurl}}/images/mpower_data_overview.png)
+
 
 
 
