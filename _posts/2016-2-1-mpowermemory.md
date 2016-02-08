@@ -113,10 +113,13 @@ I found these observations very interesting. To follow up, I took a look at the 
 
 ![meantimebwtaps_dists.png]({{site.baseurl}}/images/meantimebwtaps_dists.png)
 
+I was surprised, on the other hand, that the distribution of reaction times (i.e., the length of time before the first tap in a given game) did not vary strongly between Parkinson's from non-Parkinson's patients. However, as can be seen in the plot below, there are a handful of Parkinson's patients with excessively long reaction times, and 
+
 
 ##  Challenges with uncontrolled sampling
 
 I did found, troublingly, that a logistic regression model composed of only the demographic features of age, education level, and gender, and containing no features whatsoever derived from the memory game, predicts whether a user has Parkinson's with an Area under the curve of 0.81 -- even better than my model trained from the memory game. This is obviously not right, and betrays a strong bias in the demographic distribution of the data (see my previous discussion about resampling). To avoid contaminating my models, I excluded all of these demographic features outright. However, given a more demographically balanced dataset (which might exist in the future when many more people have played the memory game), education level and especially age would likely become useful to be added to a model as interaction terms.
+
 
 
 
