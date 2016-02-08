@@ -111,6 +111,7 @@ There are two striking observations to be made from the distribution of these co
 
 I found these observations very interesting. To follow up, I took a look at the distribution of Parkinson's and non-Parkinson's scores on some of the most informative features that came out of my analysis. Unlike the memory score, it is clear that some of these features say something about whether a user has Parkinson's.
 
+![meantimebwtaps_dists.png]({{site.baseurl}}/images/meantimebwtaps_dists.png)
 
 
 ##  Challenges with uncontrolled sampling
