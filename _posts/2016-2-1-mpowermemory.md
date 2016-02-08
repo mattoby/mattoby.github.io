@@ -5,7 +5,7 @@ published: true
 ---
 
 
-
+Click [here](bit.ly/mpowermemory "demoslides") to see my short presentation on this research for Insight!
 
 Healthcare is changing rapidly. The old model of tracking patients through sporadic doctor's visits is becoming antiquated with the enormous innovations in social media, mobile phone technology, and integration of data that have transformed so many fields. These platforms are only now being adopted for tracking patient wellness, but are rapidly meeting the expectations through initiatives such as the Apple ResearchKit, which was published last year. 
 
