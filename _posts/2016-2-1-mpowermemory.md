@@ -83,6 +83,9 @@ As I mentioned before, Parkinson's is primarily a disease of the motor system. T
 
 With this in mind, I calculated from the raw data the distance between each 'successful' touch and the center of the intended flower, as well as the time delays between touches and also before the first touch.
 
+
+![feature_engineering.png]({{site.baseurl}}/images/feature_engineering.png)
+
 ![feature_engineering.png]({{site.baseurl}}/images/feature_engineering.png)
 
 
