@@ -73,9 +73,6 @@ The first thing I did is looked at how the memory game score correlates with use
 
 ![memoryscorehist.png]({{site.baseurl}}/images/memoryscorehist.png)
 
-
-![gamescorehist.png]({{site.baseurl}}/images/gamescorehist.png)
-
 Therefore, I turned to the game records themselves. In these raw records, I had access to the regions considered 'correct' to touch for each flower, the order in which the flowers lit up, and the location and time of each touch by the user.
 
 As I mentioned before, Parkinson's is primarily a disease of the motor system. Therefore, I hypothesized that there were two groups of features that I could extract from the memory game, which 
