@@ -105,11 +105,11 @@ Logistic regression calculates coefficients for each feature, which can be inter
 
 There are three striking observations to be made from the distribution of these coefficients: 
 
-First, the most informative feature by far is the mean time between taps (especially in the 3x3 game, but also in the 4x4 game). 
+1. The most informative feature by far is the mean time between taps (especially in the 3x3 game, but also in the 4x4 game). 
 
-Second, the game score has practically no predictive power. It is nearly last in the ranking of feature importances (note, negative coefficients denote importance as well, with a negative coefficient - so memory score, having a coefficient near zero, is one of the least informative features in the list). 
+2. The game score has practically no predictive power. It is nearly last in the ranking of feature importances (note, negative coefficients denote importance as well, with a negative coefficient - so memory score, having a coefficient near zero, is one of the least informative features in the list). 
 
-Third As far as metrics of memory, the 
+3. As far as metrics of memory, the 
 
 I also found, troublingly, that 
 
