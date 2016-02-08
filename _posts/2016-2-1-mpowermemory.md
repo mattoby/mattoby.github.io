@@ -12,6 +12,7 @@ published: true
 
 
 
+
 Healthcare is changing rapidly. The old model of tracking patients through sporadic doctor's visits is becoming antiquated with the enormous innovations in social media, mobile phone technology, and integration of data that have transformed so many fields. These platforms are only now being adopted for tracking patient wellness, but are rapidly meeting the expectations through initiatives such as the Apple ResearchKit, which was published last year. 
 
 Using the new [Apple ResearchKit](http://www.apple.com/researchkit/ "iphone researchkit") technology, Sage Bionetworks has initiated a project called [mPower](http://parkinsonmpower.org/ "Mpower Parkinson's Site"), intended to produce apps to track different diseases, in the hopes of overhauling the model of healthcare tracking and move it to a more dynamic system commesurate with today's hi-tech world. 
@@ -34,10 +35,6 @@ The game gets quite hard when it gets into 4x4 mode, and you have to track 3, th
 
 Memory is affected in Parkinson's, but usually in late stages of the disease. The more common symptoms, which affect nearly all Parkinson's patients, all involve degradation of motor abilities. Motor symptoms of Parkinson's include tremors, slowness of movement, rigidity, and instability in walking and balancing. Since these symptoms are more ubiquitious among patients than memory issues, it is unclear if a test of memory will be informative. Fortunately, the records from the memory game include data that might give a hint into motor issues aside from memory issues, with a bit of feature engineering. 
 
-##  The bottom line
-
-
-
 ##  A peek at the data
 
 The mPower app is available for anybody to download and use, and to use as often as they wish. As a result, unlike in a controlled clinical trial, there are no restrictions on the number of times a user may play the memory game. Therefore, many users played the memory game only once or twice, while a few users played it dozens or hundreds of times. These highly uneven distributions can be seen in the plots below:
@@ -48,7 +45,8 @@ The mPower app is available for anybody to download and use, and to use as often
 
 It was important to account for these distributions in some way in order to get meaningful results from the data. For example, if I treated each game record as equal in my analyses, a single Parkinson's patient who played the memory game 300 times would have the same weight as 300 individuals who each played the game once. This discrepancy could strongly bias my results in unproductive ways. I handled this distribution issue by using only a single reading per user - either a single random record, or the average for that user over every time they played the memory game. 
 
-the recotaking the mean values of features reducing the records for each patient down to 
+The next issue I had to contend with was a large difference in the distribution of ages between Parkinson's and non-Parkinson's patients. There were 
+
 
 The first thing I did is looked at how the memory game score correlates with users having Parkinson's. It turned out, this score, taken alone, is not very informative.
 
@@ -81,8 +79,10 @@ In the raw gameplay records, I had access to the regions considered 'correct' to
 
 You can see all the code I used to do this analysis here:
 
-The data from the memory test is held in Synapse, Sage's web portal for data. Anyone can access it if they sign up for a Synapse account and go through a certification procedure. Once a user is certified, they can access the data from the memory test here: [mPowerSynapse](https://www.synapse.org/#!Synapse:syn4993293/wiki/ "mPower study data")
+[An ipython notebook that summarizes my analyses](https://github.com/mattoby/mpower_memory/blob/master/Memory_summary_analyses.ipynb "overview notebook")
 
+
+The data from the memory test is held in Synapse, Sage's web portal for data. Anyone can access it if they sign up for a Synapse account and go through a certification procedure. Once a user is certified, they can access the data from the memory test here: [mPowerSynapse](https://www.synapse.org/#!Synapse:syn4993293/wiki/ "mPower study data")
 
 
 Partnered with ![sage_logo.jpg]({{site.baseurl}}/images/sage_logo.jpg) and ![mpowerparkinsons.svg]({{site.baseurl}}/images/mpowerparkinsons.svg) mPower
