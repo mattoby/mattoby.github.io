@@ -34,7 +34,11 @@ The game gets quite hard when it gets into 4x4 mode, and you have to track 3, th
 
 ##  What can a memory test tell us about Parkinson's?
 
-Memory is affected in Parkinson's, but usually in late stages of the disease. The more common symptoms, which affect nearly all Parkinson's patients, all involve degradation of motor abilities. Motor symptoms of Parkinson's include tremors, slowness of movement, rigidity, and instability in walking and balancing. Since these symptoms are more ubiquitious among patients than memory issues, it is unclear if a test of memory will be informative. Fortunately, the records from the memory game include data that might give a hint into motor issues aside from memory issues, with a bit of feature engineering. 
+Memory is affected in Parkinson's, but usually in late stages of the disease. The more common symptoms, which affect nearly all Parkinson's patients, all involve degradation of motor abilities. Motor symptoms of Parkinson's include tremors, slowness of movement, rigidity, and instability in walking and balancing. Since these symptoms are more ubiquitious among patients than memory issues, it is unclear if a test of memory will be informative. Therefore, my tasks in this project were twofold:
+
+1. Build a predictor of which patients have Parkinson's.
+
+2. Determine which features are the most predictive of disease state.
 
 ##  A peek at the data
 
@@ -52,21 +56,17 @@ The next issue I had to contend with was a large difference in the distribution 
 
 Beyond this rough age matching, I toyed around with resampling the non-Parkinson's patients to better match the distribution of ages of the Parkinson's patients. However, I did not proceed with this approach, as it required me cutting out more users than I was willing to for the sake of clean data. When many more users have played the memory game, I believe that better age matching using this sort of a resampling approach may become prudent. 
 
-##  Squeezing juice from the data
+##  Squeezing feature juice
 
 From each user session, the memory game tracks an overall 'memory score' (denoting accuracy in touching the flowers), as well as a detailed record of screen taps during gameplay. There is also a record of whether the user is currently on medication, based on self reporting. Aside from this, I had available each user's disease status, as well as some demographic information.
 
 ![mpower_data_overview.png]({{site.baseurl}}/images/mpower_data_overview.png)
 
-The first thing I did is looked at how the memory game score correlates with users having Parkinson's. It turned out, this score, taken alone, is not very informative.
+The first thing I did is looked at how the memory game score correlates with users having Parkinson's. It turned out, this score, taken alone, is not tremendously informative about disease status.
 
 ![gamescorehist.png]({{site.baseurl}}/images/gamescorehist.png)
 
-
-The game outputs a 'game score', which is intended to assess memory. I also had access to some demographic data from patients and raw records from their plays of the memory game.
-
-
-
+Therefore, I turned to the game records themselves, 
 In the raw gameplay records, I had access to the regions considered 'correct' to touch for each flower, the order in which the flowers lit up, and the location and time of each touch by the user. I modeled these data as shown in the figure, calculating from these raw data the distance between each 'successful' touch and the center of the flower. This 'touch distance' might indicate an inability of users to hold their hands steady. I also extracted the timing of touches, which I split into two types of features. First, I tracked the time before first touch in each game, i.e., the latency. Next, I averaged the time between each pair of touches after the first one, for a mean touch delay. I aggregated these features separately for plays of the 2x2 game, the 3x3 game, and the 4x4 game, since they differ considerably in difficulty. These features, along with the game score, formed my feature set for predicting the health status of people who played the memory game.
 
 ![featureengineering1.png]({{site.baseurl}}/images/featureengineering1.png)
