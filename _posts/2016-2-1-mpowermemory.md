@@ -129,7 +129,7 @@ I have provided in my github repo for the project a clean Ipython notebook conta
 
 ### 3. My Insight demo presentation:
 
-Click [here](bit.ly/mpowermemory "demoslides") to see my short demo presentation on this research!
+Click [here](http://bit.ly/mpowermemory "demoslides") to see my short demo presentation on this research!
 
 ### 4. Accessing the mPower memory game data:
 
