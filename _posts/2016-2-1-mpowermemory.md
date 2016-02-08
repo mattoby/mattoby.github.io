@@ -91,11 +91,16 @@ I split the touch timings into two types of features. First, I tracked the 'reac
 
 ##  Predicting Parkinson's
 
-I approached the task of classifying users into Parkinson's and non-Parkinson's groups using a logistic regression model. I found that I achieved the best results with little or no regularization, which I speculate is due to a broad spred of information among the features (beyond the few top features that hold most of the information, as seen below). I split my data 70%/30% into training and test sets, and then performed machine learning. As seen in the Receiver Operating Characteristic curves below, my model is able to predict whether users of the memory game have Parkinson's with an area under the ROC curve of 0.74-0.78, depending on the particulars of the analysis. This means that, given game records from a Parkinson's patient and a non-Parkinson's user, the model will give a higher "likelihood of Parkinson's" score to the actual patient 74-78% of the time. A random predictor would, of course, predict at 50%. 
+I approached the task of classifying users into Parkinson's and non-Parkinson's groups using a logistic regression model. I found that I achieved the best results with little or no regularization, which I speculate is due to a broad spred of information among the features (beyond the few top features that hold most of the information, as seen below). I split my data 70%/30% into training and test sets, and then performed machine learning. 
+
+As seen in the Receiver Operating Characteristic curves below, my model is able to predict whether users of the memory game have Parkinson's with an area under the ROC curve of 0.74-0.78, depending on the particulars of the analysis. This means that, given game records from a Parkinson's patient and a non-Parkinson's user, the model will give a higher "likelihood of Parkinson's" score to the actual patient 74-78% of the time. A random predictor would, of course, predict at 50%. 
 
 ![ROCs_allfeatures.png]({{site.baseurl}}/images/ROCs_allfeatures.png)
 
-The features that led to the ROC curves shown above are 
+Logistic regression calculates coefficients for each feature, which can be interpreted as relative importances of the features for doing the classification (i.e., for predicting whether a game user has Parkinson's). Looking at these coefficients can give a lot of insight into what a model is doing. 
+
+![feature_importances_allfeatures.png]({{site.baseurl}}/images/feature_importances_allfeatures.png)
+
 
 I also found, troublingly, that 
 
