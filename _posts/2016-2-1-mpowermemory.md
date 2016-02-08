@@ -16,6 +16,7 @@ published: true
 
 
 
+
 Healthcare is changing rapidly. The old model of tracking patients through sporadic doctor's visits is becoming antiquated with the enormous innovations in social media, mobile phone technology, and integration of data that have transformed so many fields. These platforms are only now being adopted for tracking patient wellness, but are rapidly meeting the expectations through initiatives such as the Apple ResearchKit, which was published last year. 
 
 Using the new [Apple ResearchKit](http://www.apple.com/researchkit/ "iphone researchkit") technology, Sage Bionetworks has initiated a project called [mPower](http://parkinsonmpower.org/ "Mpower Parkinson's Site"), intended to produce apps to track different diseases, in the hopes of overhauling the model of healthcare tracking and move it to a more dynamic system commesurate with today's hi-tech world. 
@@ -99,9 +100,10 @@ As seen in the Receiver Operating Characteristic curves below, my model is able 
 ![ROCs_allfeatures.png]({{site.baseurl}}/images/ROCs_allfeatures.png)
 
 Logistic regression calculates coefficients for each feature, which can be interpreted as relative importances of the features for doing the classification (i.e., for predicting whether a game user has Parkinson's). Looking at these coefficients can give a lot of insight into what a model is doing. 
+
 ![feature_importances_allfeatures.png]({{site.baseurl}}/images/feature_importances_allfeatures.png)
 
-
+There are three striking observations to be made from the distribution of these coefficients. First, the most informative feature by far is the mean time between taps (especially in the 3x3 game, but also in the 4x4 game). Second, the game score has practically no predictive power. It is nearly last in the ranking of feature importances (note, negative coefficients denote importance as well, with a negative coefficient - so memory score, having a coefficient near zero, is one of the least informative features in the list). As far as metrics of memory, the 
 
 I also found, troublingly, that 
 
