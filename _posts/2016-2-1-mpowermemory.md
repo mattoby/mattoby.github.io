@@ -6,13 +6,11 @@ published: true
 
 
 
-Healthcare is changing rapidly. The old model of tracking chronic disease patients through sporadic doctor's visits is becoming antiquated with the enormous innovations in social media, mobile phone technology, and integration of data that have transformed so many fields. These platforms are now being adopted for tracking patient wellness, and are poised to send large ripples through healthcare. 
+Healthcare is changing rapidly. The current model of tracking chronic disease patients through sporadic doctor's visits is poised to becoming antiquated with the enormous innovations in social media, mobile phone technology, and integration of data that have transformed so many fields. These platforms are now being adopted for tracking patient wellness, and are poised to shake up the status quo for how disease is tracked and treated. 
 
-This change is being catalyzed through initiatives such as the Apple ResearchKit, which was published last year. 
+This change is being catalyzed in part through initiatives such as the [Apple ResearchKit](http://www.apple.com/researchkit/ "iphone researchkit"), a set of tools published last year that allow researchers to build health related apps on Apple mobile phones. Capitalizing on this technology, the Seattle-based non-profit Sage Bionetworks has initiated a number of projects to track disease progress through mobile apps. These projects have been designed in the hopes of providing proof of principle for new ways to track chronic diseases, and to encourage a shift to more dynamic patient tracking that is commesurate with today's hi-tech world. 
 
-Using the new [Apple ResearchKit](http://www.apple.com/researchkit/ "iphone researchkit") technology, Sage Bionetworks has initiated a project called [mPower](http://parkinsonmpower.org/ "Mpower Parkinson's Site"), intended to produce apps to track different diseases, in the hopes of overhauling the model of healthcare tracking and move it to a more dynamic system commesurate with today's hi-tech world. 
-
-In consultation with Sage, I have done an [Insight Data Science](http://insightdatascience.com/ "Insight Data Science") project analyzing data from this mobile app. This analysis is the focus of this blog.
+One of these projects developed by Sage, the [mPower Parkinson's](http://parkinsonmpower.org/ "Mpower Parkinson's Site") project, involves a mobile app that is designed to track the progress of Parkinson's disease patients. In consultation with Sage, I have spent the last few weeks doing an [Insight Data Science](http://insightdatascience.com/ "Insight Data Science") project analyzing data from this mobile app. This analysis is the focus of this blog.
 
 ##  The mPower memory test
 
@@ -22,23 +20,23 @@ One of the tests within the mPower app is a memory game, which intends to track 
 
 ![memorygame1.png]({{site.baseurl}}/images/memorygame1.png)
 
-First, the user is prompted about whether they recently took their Parkinson's medication. Patients can thus be classed into those at their 'best' (just took meds), vs. those at their 'worst' (immediately before taking medication). Then, a 3x3 grid of flowers appears on the screen, and the flowers light up in a randomized order. FInally, the user is tasked with touching the flowers in the same order they lit up. If they do poorly, the app reduces the number of flowers to a 2x2 grid. If they do well, then the complexity increases to a 4x4 grid. If they continue to do well, the number of flowers they have to remember that lit up also increases. 
+First, the user is prompted about whether they recently took their Parkinson's medication. Patients can thus be classed into those at their 'best' (just took meds), vs. those at their 'worst' (immediately before taking medication). Then, a 3x3 grid of flowers appears on the screen, and the flowers light up in a randomized order. Finally, the user is tasked with touching the flowers in the same order they lit up. If they do poorly, the app reduces the number of flowers to a 2x2 grid. If they do well, then the complexity increases to a 4x4 grid. If they continue to do well, the number of flowers they have to remember that lit up also increases. 
 
-The game gets quite hard when it gets into 4x4 mode, and you have to track 3, then 4, then 5 flowers. But don't take my word for it -- if you have an iphone, [try it yourself](http://itunes.apple.com/us/app/parkinson-mpower-study-app/id972191200?mt=8 "mpower on itunes"). It will be for a good cause. non-Parkinson's patients are important in this study too, as they provide a baseline for comparison. 
+The game gets quite hard when it gets into 4x4 mode, and you have to track 3, then 4, then 5 flowers. But don't take my word for it -- if you have an iphone, [try it yourself](http://itunes.apple.com/us/app/parkinson-mpower-study-app/id972191200?mt=8 "mpower on itunes"). It will be for a good cause. Non-Parkinson's patients are important in this study too, as you will see shortly. 
 
 ##  What can a memory test say about Parkinson's?
 
-Memory is affected in Parkinson's, but usually in late stages of the disease. The more common symptoms, which affect nearly all Parkinson's patients, all involve degradation of motor abilities. Motor symptoms of Parkinson's include tremors, slowness of movement, rigidity, and instability in walking and balancing. Since these symptoms are more ubiquitious among patients than memory issues, it is unclear if a test of memory will be informative. Therefore, my tasks in this project were twofold:
+Memory is affected in Parkinson's, but usually in late stages of the disease. The more common symptoms, which affect nearly all Parkinson's patients, involve degradation of motor abilities. Motor symptoms of Parkinson's include tremors, slowness of movement, rigidity, and instability in walking and balancing. Since these symptoms are more common among patients than memory issues, it is unclear if a test of memory will be informative. Therefore, my tasks in this project were twofold:
 
 ---
 
-1. Build a predictor of which patients have Parkinson's.
+1. Use the memory game data to build a predictor of which patients have Parkinson's.
 
-2. Determine which features are the most predictive of disease state.
+2. Determine which features from that predictor are the most predictive of disease state.
 
 ---
 
-These goals would set a solid basis for future analyses to be carried out by other researchers.
+These goals would set a solid basis for future analyses to be carried out by other researchers. Aside from these, there is a bonus goal of predicting whether a patient's meds are working. I'll address this goal near the end of the blog. 
 
 ##  A peek at the data
 
@@ -48,13 +46,13 @@ The mPower app is available for anybody to download and use, and to use as often
 ![numrecords_park_nopark_withrug.png]({{site.baseurl}}/images/numrecords_park_nopark_withrug.png)
 
 
-It was important to account for these distributions in some way in order to get meaningful results from the data. For example, if I treated each game record as equal in my analyses, a single Parkinson's patient who played the memory game 300 times would have the same weight as 300 individuals who each played the game once. This discrepancy could strongly bias my results in unproductive ways. I handled this distribution issue by using only a single reading per user - either a single random record, or the average for that user over every time they played the memory game. 
+It was important to account for these distributions in some way in order to get meaningful results from the data. For example, if I treated each game record as equal in my analyses, a single Parkinson's patient who played the memory game 300 times would have the same weight as 300 individuals who each played the game once. This discrepancy could strongly bias my results in unproductive ways (and in fact did in early analyses). I handled this distribution issue by using only a single reading per user - either a single random record, or the average for that user over every time they played the memory game. 
 
 The next issue I had to contend with was a large difference in the distribution of ages between Parkinson's and non-Parkinson's patients. Below the age of 45, there were practically no Parkinson's patients in the cohort. While it would be nice to extend my analysis of Parkinson's to young users of the app, it was unrealistic given the data. Therefore, I put a hard cutoff of ages, and only included users 45 years old or older in my analyses.
 
 ![agehists.png]({{site.baseurl}}/images/agehists.png)
 
-Beyond this rough age matching, I toyed around with resampling the non-Parkinson's patients to better match the distribution of ages of the Parkinson's patients. However, I did not proceed with this approach, as it required me cutting out more users than I was willing to for the sake of clean data. When many more users have played the memory game, I believe that better age matching using this sort of a resampling approach may become prudent.
+Beyond this rough age matching, I toyed around with resampling the non-Parkinson's patients to better match the distribution of ages of the Parkinson's patients. However, I did not proceed with this approach, as it required me cutting out more users than I was willing to for the sake of clean data. When many more users have played the memory game, I believe that better age matching using this sort of a resampling approach may become prudent.  
 
 ##  Digging into the features
 
@@ -68,7 +66,7 @@ The first thing I did is looked at how the memory game score correlates with use
 
 Therefore, I turned to the game records themselves. In these raw records, I had access to the regions considered correct to touch for each flower, the order in which the flowers lit up, and the location and time of each touch by the user.
 
-As I mentioned before, Parkinson's is primarily a disease of the motor system. Therefore, I hypothesized that there could be two new groups of features, aside from memory-based features like the game score, which might be informative:
+As I mentioned before, Parkinson's is primarily a disease of the motor system. Therefore, I hypothesized that there could be two new groups of features, aside from memory-based features like the game score, that might be informative:
 
 1. Features having to do with time delay between touches, which could indicate _Bradykinesia_ (slowness of movement) or _Akinesia_ (difficulty initiating movements). 
 
@@ -86,7 +84,7 @@ I split the touch timings into two types of features. First, I tracked the 'reac
 
 I approached the task of classifying users into Parkinson's and non-Parkinson's groups using a logistic regression model. I found that I achieved the best results with little or no regularization, which I speculate is due to a broad spred of information among the features (beyond the few top features that hold most of the information, as seen below). I split my data 70%/30% into training and test sets, and then performed machine learning. 
 
-As seen in the Receiver Operating Characteristic curves below, my model is able to predict whether users of the memory game have Parkinson's with an area under the ROC curve of 0.74-0.78, depending on the particulars of the analysis (these curves all show model performance on the held out test data). This means that, given game records from a Parkinson's patient and a non-Parkinson's user, the model will give a higher "likelihood of Parkinson's" score to the actual patient 74-78% of the time. A random predictor would, of course, predict at 50%. 
+As seen in the Receiver Operating Characteristic curves below, my model is able to predict whether users of the memory game have Parkinson's with an area under the ROC curve of 0.74-0.78, depending on the particulars of the analysis (these curves all show model performance on the held out test data). This means that, given game records from a Parkinson's patient and a non-Parkinson's user, the model will give a higher "likelihood of Parkinson's" score to the actual patient 74-78% of the time. A random predictor would predict at 50%. 
 
 ![ROCs_allfeatures.png]({{site.baseurl}}/images/ROCs_allfeatures.png)
 
@@ -98,7 +96,7 @@ There are two striking observations to be made from the distribution of these co
 
 1. The most informative features by far are the mean times between taps (especially in the 3x3 game, but also in the 4x4 game). I found that removing these features severely reduces predictiveness of the model.
 
-2. The memory score very little predictive power. It is nearly last in the ranking of feature importances (note, negative coefficients denote importance as well -- so memory score, having a coefficient near zero, is one of the least informative features in the list). I found that the model's predictiveness is not affected by removal of the memory score.
+2. The memory score very little predictive power. It is nearly last in the ranking of feature importances (note, negative coefficients denote importance as well, just with a negative weighting -- so memory score, having a coefficient near zero, is one of the least informative features in the list). I found that the model's predictiveness is not affected by removal of the memory score.
 
 I found these observations very interesting. To follow up, I took a look at the distribution of Parkinson's and non-Parkinson's scores on some of the most informative features that came out of my analysis. Unlike the memory score, it is clear that the timing between taps say something about whether a user has Parkinson's.
 
@@ -108,18 +106,21 @@ At first glance, the distribution of reaction times (i.e., the length of time be
 
 ## Do the meds work?
 
-A question that I wanted to explore, going beyond whether a user has Parkinson's, is predicting for a given patient if his or her medicine is working. This hits a fundamental motivation for the mPower study, which is to do better patient tracking in between sparse doctor visits. I tried a few approaches to get at this question, including building models that classify medicated versus non-medicated game records for individual patients, as well as building a model that tries to class records into medicated versus non-medicated categories across all patients. I also did some preliminary modeling to see if I could predict the number of years that a patient had Parkinson's, the number of years they have been non-medicated, and whether they have had surgery or brain stimulation therapy. None of these analyses returned promising results. 
+The 'bonus' question that I wanted to explore, going beyond whether a user has Parkinson's, is predicting for a given patient if his or her medicine is working. This hits a fundamental motivation for the mPower study, which is to do better patient tracking in between sparse doctor visits. I tried a few approaches to get at this question, including building models that classify medicated versus non-medicated game records for individual patients, as well as building a model that tries to class records into medicated versus non-medicated categories across all patients. I also did some preliminary modeling to see if I could predict the number of years that a patient had Parkinson's, the number of years they have been non-medicated, and whether they have had surgery or brain stimulation therapy. None of these analyses returned promising results. 
 
-One key source of data that could help future researchers answer these questions is the [International Parkinson and Movement Disorder Society](http://www.movementdisorders.org/ "MDS")'s Unified Parkinson's Disease Rating Scale (MDS-UPDRS) survey, a professional health assessment designed to determine the severity of a Parkinson patient's disease. The UPDRS data is available on Sage's [public mPower research portal](https://www.synapse.org/#!Synapse:syn4993293/wiki/247859 "synapse mPower"), but requires special certifications that I was not able to obtain in the 3 week timespan of this Insight project. Being able to quantify severity of disease in the patients would add a new, highly informative dimension that might allow future researchers to tease out more from the same data.
+One key source of data that could help future researchers to answer these questions is the [International Parkinson and Movement Disorder Society](http://www.movementdisorders.org/ "MDS")'s Unified Parkinson's Disease Rating Scale (MDS-UPDRS) survey, a professional health assessment designed to determine the severity of a Parkinson patient's disease. The UPDRS data is available on Sage's [public mPower research portal](https://www.synapse.org/#!Synapse:syn4993293/wiki/247859 "synapse mPower"), but requires special certifications that I was not able to obtain in the 3 week timespan of this Insight project. Being able to quantify severity of disease in the patients would add a new, highly informative dimension that might allow future researchers to tease out more from the same data.
 
 ##  A note about uncontrolled sampling
 
-A troubling observation I made during the course of this project is that I was able to predict whether a patient has Parkinson's disease with good accuracy by knowing only his or her gender, education level, and age. Since these predictions contained no features whatsoever derived from the memory game, they are highly suspect, and betray a bias due to uneven demographics of patients playing the game, rather than any helpful signal that would be predictive for patients at large (see also my previous discussion about resampling). To avoid contaminating my models with these biased features, I excluded all of these demographic features outright. Therefore, no demographic features are included in the analyses presented above. However, given a more demographically balanced dataset (which might exist in the future when many more people have played the memory game, and demographic balancing is possible via resampling), education level and especially age would likely become useful to be added to a model, and potentially to include as interaction terms with some of the other features.
+A troubling observation I made during the course of this project is that I was able to predict whether a patient has Parkinson's disease with good accuracy by knowing only his or her gender, education level, and age. Since these predictions contained no features whatsoever derived from the memory game, they are highly suspect, and betray a bias due to uneven demographics of patients playing the game, rather than any helpful signal that would be predictive for patients at large (see also my previous discussion about resampling). To avoid contaminating my models with these biased features, I excluded all of these demographic features outright. Therefore, no demographic features are included in the analyses presented above. However, given a more demographically balanced dataset (which might exist in the future when many more people have played the memory game, and demographic balancing is possible via resampling), education level and especially age would likely become useful features to be added to a model. They might also be informative under those circumstances to include as interaction terms with some of the other features, such as time between clicks.
 
+## Conclusions
+
+During my last few weeks at Insight, I've found it gratifying to work on an important problem with a real dataset that can hopefully make an impact on real lives of people with Parkinson's. Contributing to a much-needed paradigm shift in patient tracking, and learning many new data science tools along the way, has been an exhilarating ride. It is my hope that the insights I developed here will be put into use as patient tracking shifts more and more onto mobile.
 
 ## Accessing the code and data
 
-This project was done as an Insight Data Science project in consultation with Sage Bionetworks. The main deliverables for Sage are a body of code for analyzing the mPower memory data, as well as a summary of the analyses (i.e., this blog), for use by other researchers who are interested to use the data. Links to these resources, as well as other related resources for interested researchers, are listed here:
+I did this project as an Insight Data Science fellow, in consultation with Sage Bionetworks. The main deliverables for Sage are a body of code for analyzing the mPower memory data, as well as a summary of the analyses (i.e., this blog), for use by other researchers who are interested to use the data. Links to these resources, as well as other related resources for interested researchers, are listed here:
 
 ### 1. My code:
 
@@ -131,7 +132,7 @@ I have provided in my github repo for the project a clean Ipython notebook conta
 
 ### 3. My Insight demo presentation:
 
-Click  [here](http://bit.ly/mpowermemory) to see my short Insight demo presentation on this work!
+Click [here](http://bit.ly/mpowermemory) to see my short Insight demo presentation on this work!
 
 ### 4. Accessing the mPower memory game data:
 
