@@ -7,18 +7,6 @@ published: true
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
 Healthcare is changing rapidly. The old model of tracking patients through sporadic doctor's visits is becoming antiquated with the enormous innovations in social media, mobile phone technology, and integration of data that have transformed so many fields. These platforms are only now being adopted for tracking patient wellness, but are rapidly meeting the expectations through initiatives such as the Apple ResearchKit, which was published last year. 
 
 Using the new [Apple ResearchKit](http://www.apple.com/researchkit/ "iphone researchkit") technology, Sage Bionetworks has initiated a project called [mPower](http://parkinsonmpower.org/ "Mpower Parkinson's Site"), intended to produce apps to track different diseases, in the hopes of overhauling the model of healthcare tracking and move it to a more dynamic system commesurate with today's hi-tech world. 
@@ -65,7 +53,7 @@ The next issue I had to contend with was a large difference in the distribution 
 
 ![agehists.png]({{site.baseurl}}/images/agehists.png)
 
-Beyond this rough age matching, I toyed around with resampling the non-Parkinson's patients to better match the distribution of ages of the Parkinson's patients. However, I did not proceed with this approach, as it required me cutting out more users than I was willing to for the sake of clean data. When many more users have played the memory game, I believe that better age matching using this sort of a resampling approach may become prudent. 
+Beyond this rough age matching, I toyed around with resampling the non-Parkinson's patients to better match the distribution of ages of the Parkinson's patients. However, I did not proceed with this approach, as it required me cutting out more users than I was willing to for the sake of clean data. When many more users have played the memory game, I believe that better age matching using this sort of a resampling approach may become prudent.
 
 ##  Digging into the features
 
@@ -97,7 +85,7 @@ I split the touch timings into two types of features. First, I tracked the 'reac
 
 I approached the task of classifying users into Parkinson's and non-Parkinson's groups using a logistic regression model. I found that I achieved the best results with little or no regularization, which I speculate is due to a broad spred of information among the features (beyond the few top features that hold most of the information, as seen below). I split my data 70%/30% into training and test sets, and then performed machine learning. 
 
-As seen in the Receiver Operating Characteristic curves below, my model is able to predict whether users of the memory game have Parkinson's with an area under the ROC curve of 0.74-0.78, depending on the particulars of the analysis. This means that, given game records from a Parkinson's patient and a non-Parkinson's user, the model will give a higher "likelihood of Parkinson's" score to the actual patient 74-78% of the time. A random predictor would, of course, predict at 50%. 
+As seen in the Receiver Operating Characteristic curves below, my model is able to predict whether users of the memory game have Parkinson's with an area under the ROC curve of 0.74-0.78, depending on the particulars of the analysis (these curves all show model performance on the held out test data). This means that, given game records from a Parkinson's patient and a non-Parkinson's user, the model will give a higher "likelihood of Parkinson's" score to the actual patient 74-78% of the time. A random predictor would, of course, predict at 50%. 
 
 ![ROCs_allfeatures.png]({{site.baseurl}}/images/ROCs_allfeatures.png)
 
@@ -121,16 +109,16 @@ At first glance, the distribution of reaction times (i.e., the length of time be
 
 A question that I wanted to explore, going beyond whether a user has Parkinson's, is predicting for a given patient if his or her medicine is working. This hits a fundamental motivation for the mPower study, which is to do better patient tracking in between sparse doctor visits. I tried a few approaches to get at this question, including building models that classify medicated versus non-medicated game records for individual patients, as well as building a model that tries to class records into medicated versus non-medicated categories across all patients. I also did some preliminary modeling to see if I could predict the number of years that a patient had Parkinson's, the number of years they have been non-medicated, and whether they have had surgery or brain stimulation therapy. None of these analyses returned promising results. 
 
-One key source of data that could help future researchers answer these questions is the [International Parkinson and Movement Disorder Society](http://www.movementdisorders.org/ "MDS")'s Unified Parkinson's Disease Rating Scale (MDS-UPDRS) survey, a professional health assessment designed to determine the severity of a Parkinson patient's disease. This data is available through Sage Bionetwork's [public research portal for mPower data](https://www.synapse.org/#!Synapse:syn4993293/wiki/247859 "synapse mPower"), but requires special certifications that I was not able to obtain in the 3 week timespan of this Insight project. Being able to quantify severity of disease in the patients would add a new, highly informative dimension that might allow future researchers to tease out more from the same data.
+One key source of data that could help future researchers answer these questions is the [International Parkinson and Movement Disorder Society](http://www.movementdisorders.org/ "MDS")'s Unified Parkinson's Disease Rating Scale (MDS-UPDRS) survey, a professional health assessment designed to determine the severity of a Parkinson patient's disease. The UPDRS data is available on Sage's [public mPower research portal](https://www.synapse.org/#!Synapse:syn4993293/wiki/247859 "synapse mPower"), but requires special certifications that I was not able to obtain in the 3 week timespan of this Insight project. Being able to quantify severity of disease in the patients would add a new, highly informative dimension that might allow future researchers to tease out more from the same data.
 
-##  Challenges with uncontrolled sampling
+##  A note about uncontrolled sampling
 
-I did found, troublingly, that a logistic regression model composed of only the demographic features of age, education level, and gender, and containing no features whatsoever derived from the memory game, predicts whether a user has Parkinson's with an Area under the curve of 0.81 -- even better than my model trained from the memory game. This is obviously not right, and betrays a strong bias in the demographic distribution of the data (see my previous discussion about resampling). To avoid contaminating my models, I excluded all of these demographic features outright. However, given a more demographically balanced dataset (which might exist in the future when many more people have played the memory game), education level and especially age would likely become useful to be added to a model as interaction terms.
+A troubling observation I made during the course of this project is that I was able to predict whether a patient has Parkinson's disease with good accuracy by knowing only his or her gender, education level, and age. Since these predictions contained no features whatsoever derived from the memory game, they are highly suspect, and betray a bias due to uneven demographics of patients playing the game, rather than any helpful signal that would be predictive for patients at large (see also my previous discussion about resampling). To avoid contaminating my models with these biased features, I excluded all of these demographic features outright. Therefore, no demographic features are included in the analyses presented above. However, given a more demographically balanced dataset (which might exist in the future when many more people have played the memory game, and demographic balancing is possible via resampling), education level and especially age would likely become useful to be added to a model, and potentially to include as interaction terms with some of the other features.
 
 
 ## For other researchers
 
-You can see all the code I used to do this analysis here:
+The main You can see all the code I used to do this analysis here:
 
 [An ipython notebook that summarizes my analyses](http://github.com/mattoby/mpower_memory/blob/master/Memory_summary_analyses.ipynb "overview notebook")
 
