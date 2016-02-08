@@ -49,7 +49,9 @@ The next issue I had to contend with was a large difference in the distribution 
 
 ![agehists.png]({{site.baseurl}}/images/agehists.png)
 
-Beyond this rough age matching, I toyed around with resampling the non-Parkinson's patients to better match the distribution of ages of the Parkinson's patients. However, I did not proceed with this approach, as it caused me to cut out more users for the sake of clean data than I was willing to. When many more users have played the memory game, I believe that better age matching will be a good approach in order to boost model predictiveness. 
+Beyond this rough age matching, I toyed around with resampling the non-Parkinson's patients to better match the distribution of ages of the Parkinson's patients. However, I did not proceed with this approach, as it caused me to cut out more users for the sake of clean data than I was willing to. When many more users have played the memory game, I believe that better age matching will become a good idea, and may help boost the predictiveness of future models. 
+
+
 
 The first thing I did is looked at how the memory game score correlates with users having Parkinson's. It turned out, this score, taken alone, is not very informative.
 
@@ -75,7 +77,7 @@ In the raw gameplay records, I had access to the regions considered 'correct' to
 
 ##  Predicting Parkinson's with a random forest model
 
-
+I also found, troublingly, that 
 ##  Challenges with uncontrolled sampling
 
 ## For other researchers
