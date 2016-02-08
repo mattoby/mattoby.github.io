@@ -35,7 +35,7 @@ One of the tests within the mPower app is a memory game, which intends to track 
 
 First, the user is prompted about whether they recently took their Parkinson's medication. Patients can thus be classed into those at their 'best' (just took meds), vs. those at their 'worst' (immediately before taking medication). Then, a 3x3 grid of flowers appears on the screen, and the flowers light up in a randomized order. FInally, the user is tasked with touching the flowers in the same order they lit up. If they do poorly, the app reduces the number of flowers to a 2x2 grid. If they do well, then the complexity increases to a 4x4 grid. If they continue to do well, the number of flowers they have to remember that lit up also increases. 
 
-The game gets quite hard when it gets into 4x4 mode, and you have to track 3, then 4, then 5 flowers. But don't take my word for it -- if you have an iphone, [try it yourself](https://itunes.apple.com/us/app/parkinson-mpower-study-app/id972191200?mt=8 "mpower on itunes"). It will be for a good cause. non-Parkinson's patients are important in this study too, as they provide a baseline for comparison. 
+The game gets quite hard when it gets into 4x4 mode, and you have to track 3, then 4, then 5 flowers. But don't take my word for it -- if you have an iphone, [try it yourself](http://itunes.apple.com/us/app/parkinson-mpower-study-app/id972191200?mt=8 "mpower on itunes"). It will be for a good cause. non-Parkinson's patients are important in this study too, as they provide a baseline for comparison. 
 
 ##  What can a memory test say about Parkinson's?
 
@@ -134,10 +134,10 @@ I did found, troublingly, that a logistic regression model composed of only the 
 
 You can see all the code I used to do this analysis here:
 
-[An ipython notebook that summarizes my analyses](https://github.com/mattoby/mpower_memory/blob/master/Memory_summary_analyses.ipynb "overview notebook")
+[An ipython notebook that summarizes my analyses](http://github.com/mattoby/mpower_memory/blob/master/Memory_summary_analyses.ipynb "overview notebook")
 
 
-The data from the memory test is held in Synapse, Sage's web portal for data. Anyone can access it if they sign up for a Synapse account and go through a certification procedure. Once a user is certified, they can access the data from the memory test here: [mPowerSynapse](https://www.synapse.org/#!Synapse:syn4993293/wiki/ "mPower study data")
+The data from the memory test is held in Synapse, Sage's web portal for data. Anyone can access it if they sign up for a Synapse account and go through a certification procedure. Once a user is certified, they can access the data from the memory test here: [mPowerSynapse](http://www.synapse.org/#!Synapse:syn4993293/wiki/ "mPower study data")
 
 
 Partnered with ![sage_logo.jpg]({{site.baseurl}}/images/sage_logo.jpg) and ![mpowerparkinsons.svg]({{site.baseurl}}/images/mpowerparkinsons.svg) mPower
