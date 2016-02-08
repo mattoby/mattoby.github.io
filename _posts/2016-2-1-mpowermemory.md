@@ -121,7 +121,7 @@ I did found, troublingly, that a logistic regression model composed of only the 
 
 
 ## Attempts to predict if the meds are working
-
+hurt by lack of udpdrs data... hard ot do thing.
 
 ## For other researchers
 
