@@ -51,24 +51,20 @@ The next issue I had to contend with was a large difference in the distribution 
 
 Beyond this rough age matching, I toyed around with resampling the non-Parkinson's patients to better match the distribution of ages of the Parkinson's patients. However, I did not proceed with this approach, as it caused me to cut out more users for the sake of clean data than I was willing to. When many more users have played the memory game, I believe that better age matching will become a good idea, and may help boost the predictiveness of future models. 
 
+##  Feature engineering (i.e., squeezing datajuice)
+
+The memory game 
+
+![mpower_data_overview.png]({{site.baseurl}}/images/mpower_data_overview.png)
 
 
 The first thing I did is looked at how the memory game score correlates with users having Parkinson's. It turned out, this score, taken alone, is not very informative.
 
 ![gamescorehist.png]({{site.baseurl}}/images/gamescorehist.png)
 
-## Balancing age
-
-![agehist3.png]({{site.baseurl}}/images/agehist3.png)
-
-
-##  Feature engineering (i.e., squeezing juice from the memory data)
-
 
 The game outputs a 'game score', which is intended to assess memory. I also had access to some demographic data from patients and raw records from their plays of the memory game.
 
-
-![mpower_data_overview.png]({{site.baseurl}}/images/mpower_data_overview.png)
 
 
 In the raw gameplay records, I had access to the regions considered 'correct' to touch for each flower, the order in which the flowers lit up, and the location and time of each touch by the user. I modeled these data as shown in the figure, calculating from these raw data the distance between each 'successful' touch and the center of the flower. This 'touch distance' might indicate an inability of users to hold their hands steady. I also extracted the timing of touches, which I split into two types of features. First, I tracked the time before first touch in each game, i.e., the latency. Next, I averaged the time between each pair of touches after the first one, for a mean touch delay. I aggregated these features separately for plays of the 2x2 game, the 3x3 game, and the 4x4 game, since they differ considerably in difficulty. These features, along with the game score, formed my feature set for predicting the health status of people who played the memory game.
