@@ -126,8 +126,7 @@ All of the code I wrote for this project is freely available in [my mpower_memor
 
 ### 2. A clean summary of my analysis:
 
-
-You can see all the code I used to do this analysis here:
+I have provided in my github repo for the project a clean Ipython notebook containing the key analyses presented in this blog, which other researchers are free to look at and use. It can be found [here](https://github.com/mattoby/mpower_memory/blob/master/Memory_summary_analyses.ipynb "memory ipython notebook summary").
 
 
 [An ipython notebook that summarizes my analyses](http://github.com/mattoby/mpower_memory/blob/master/Memory_summary_analyses.ipynb "overview notebook")
