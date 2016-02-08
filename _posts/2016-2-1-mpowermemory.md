@@ -6,7 +6,9 @@ published: true
 
 
 
-Healthcare is changing rapidly. The old model of tracking patients through sporadic doctor's visits is becoming antiquated with the enormous innovations in social media, mobile phone technology, and integration of data that have transformed so many fields. These platforms are only now being adopted for tracking patient wellness, but are rapidly meeting the expectations through initiatives such as the Apple ResearchKit, which was published last year. 
+Healthcare is changing rapidly. The old model of tracking chronic disease patients through sporadic doctor's visits is becoming antiquated with the enormous innovations in social media, mobile phone technology, and integration of data that have transformed so many fields. These platforms are now being adopted for tracking patient wellness, and are poised to send large ripples through healthcare. 
+
+This change is being catalyzed through initiatives such as the Apple ResearchKit, which was published last year. 
 
 Using the new [Apple ResearchKit](http://www.apple.com/researchkit/ "iphone researchkit") technology, Sage Bionetworks has initiated a project called [mPower](http://parkinsonmpower.org/ "Mpower Parkinson's Site"), intended to produce apps to track different diseases, in the hopes of overhauling the model of healthcare tracking and move it to a more dynamic system commesurate with today's hi-tech world. 
 
@@ -129,11 +131,12 @@ I have provided in my github repo for the project a clean Ipython notebook conta
 
 ### 3. My Insight demo presentation:
 
-Click  [here](http://bit.ly/mpowermemory) to see my short demo presentation on this research!
+Click  [here](http://bit.ly/mpowermemory) to see my short Insight demo presentation on this work!
 
 ### 4. Accessing the mPower memory game data:
 
-The data from the memory test is held in Synapse, Sage Bionetwork's web portal for data. Anyone can access it if they sign up for a Synapse account and go through a certification procedure. Once a user is certified, they can access the data from the memory test here: [mPowerSynapse](http://www.synapse.org/#!Synapse:syn4993293/wiki/ "mPower study data")
+The data from the memory test is held in Synapse, Sage Bionetwork's web portal for data. Anyone can access it if they sign up for a Synapse account and go through a certification procedure. Once a user is certified, they can access the data from the memory test here: [mPowerSynapse](http://www.synapse.org/#!Synapse:syn4993293/wiki/ "mPower study data"). Note, you will need to register for a Synapse account to see anything at that link.
+
 
 
 Partnered with ![sage_logo.jpg]({{site.baseurl}}/images/sage_logo.jpg) and ![mpowerparkinsons.svg]({{site.baseurl}}/images/mpowerparkinsons.svg) mPower
