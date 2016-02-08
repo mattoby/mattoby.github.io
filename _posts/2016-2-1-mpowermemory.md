@@ -95,7 +95,7 @@ I approached the task of classifying users into Parkinson's and non-Parkinson's 
 
 ![ROCs_allfeatures.png]({{site.baseurl}}/images/ROCs_allfeatures.png)
 
-
+The features that led to the ROC curves shown above are 
 
 I also found, troublingly, that 
 
