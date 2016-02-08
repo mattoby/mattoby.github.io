@@ -15,6 +15,7 @@ published: true
 
 
 
+
 Healthcare is changing rapidly. The old model of tracking patients through sporadic doctor's visits is becoming antiquated with the enormous innovations in social media, mobile phone technology, and integration of data that have transformed so many fields. These platforms are only now being adopted for tracking patient wellness, but are rapidly meeting the expectations through initiatives such as the Apple ResearchKit, which was published last year. 
 
 Using the new [Apple ResearchKit](http://www.apple.com/researchkit/ "iphone researchkit") technology, Sage Bionetworks has initiated a project called [mPower](http://parkinsonmpower.org/ "Mpower Parkinson's Site"), intended to produce apps to track different diseases, in the hopes of overhauling the model of healthcare tracking and move it to a more dynamic system commesurate with today's hi-tech world. 
@@ -98,8 +99,8 @@ As seen in the Receiver Operating Characteristic curves below, my model is able 
 ![ROCs_allfeatures.png]({{site.baseurl}}/images/ROCs_allfeatures.png)
 
 Logistic regression calculates coefficients for each feature, which can be interpreted as relative importances of the features for doing the classification (i.e., for predicting whether a game user has Parkinson's). Looking at these coefficients can give a lot of insight into what a model is doing. 
-
 ![feature_importances_allfeatures.png]({{site.baseurl}}/images/feature_importances_allfeatures.png)
+
 
 
 I also found, troublingly, that 
