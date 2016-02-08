@@ -38,7 +38,7 @@ Memory is affected in Parkinson's, but usually in late stages of the disease. Th
 
 ##  A peek at the data
 
-The mPower app is available for anybody to download and use, and to use as often as they wish. As a result, unlike in a controlled clinical trial, there are no restrictions on the number of times a user may play the memory game. Therefore, many users played the memory game only once or twice, while a few users played it dozens or hundreds of times. These highly uneven distributions can be seen in the plots below:
+The mPower app is available for anybody to download and use, and to use as often as they wish. As a result, unlike in a controlled clinical trial, there are no restrictions on the number of times a user may play the memory game. Therefore, many users played the memory game only once or twice, while a few users played it dozens or hundreds of times. These highly uneven distributions can be seen in the histograms below:
 
 
 ![numrecords_park_nopark_withrug.png]({{site.baseurl}}/images/numrecords_park_nopark_withrug.png)
@@ -46,19 +46,17 @@ The mPower app is available for anybody to download and use, and to use as often
 
 It was important to account for these distributions in some way in order to get meaningful results from the data. For example, if I treated each game record as equal in my analyses, a single Parkinson's patient who played the memory game 300 times would have the same weight as 300 individuals who each played the game once. This discrepancy could strongly bias my results in unproductive ways. I handled this distribution issue by using only a single reading per user - either a single random record, or the average for that user over every time they played the memory game. 
 
-The next issue I had to contend with was a large difference in the distribution of ages between Parkinson's and non-Parkinson's patients. Below the age of 45, there were practically no Parkinson's patients in the cohort.  While it would be nice to extend my analysis of Parkinson's to young users of the app, it was unrealistic given the data. Therefore, I put a hard cutoff of ages, and only included users 45 years old or older in my analyses.
+The next issue I had to contend with was a large difference in the distribution of ages between Parkinson's and non-Parkinson's patients. Below the age of 45, there were practically no Parkinson's patients in the cohort. While it would be nice to extend my analysis of Parkinson's to young users of the app, it was unrealistic given the data. Therefore, I put a hard cutoff of ages, and only included users 45 years old or older in my analyses.
 
 ![agehists.png]({{site.baseurl}}/images/agehists.png)
 
-Beyond this rough age matching, I toyed around with resampling the non-Parkinson's patients to better match the distribution of ages of the Parkinson's patients. However, I did not proceed with this approach, as it caused me to cut out more users for the sake of clean data than I was willing to. When many more users have played the memory game, I believe that better age matching will become a good idea, and may help boost the predictiveness of future models. 
+Beyond this rough age matching, I toyed around with resampling the non-Parkinson's patients to better match the distribution of ages of the Parkinson's patients. However, I did not proceed with this approach, as it required me cutting out more users than I was willing to for the sake of clean data. When many more users have played the memory game, I believe that better age matching using this sort of a resampling approach may become prudent. 
 
 ##  Squeezing juice from the data
 
-
-The memory game 
+From each user session, the memory game tracks an overall 'memory score' (denoting accuracy in touching the flowers), as well as a detailed record of screen taps during gameplay. There is also a record of whether the user is currently on medication, based on self reporting. Aside from this, I had available each user's disease status, as well as some demographic information.
 
 ![mpower_data_overview.png]({{site.baseurl}}/images/mpower_data_overview.png)
-
 
 The first thing I did is looked at how the memory game score correlates with users having Parkinson's. It turned out, this score, taken alone, is not very informative.
 
