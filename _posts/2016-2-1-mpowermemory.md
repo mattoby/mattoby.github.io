@@ -118,7 +118,12 @@ A troubling observation I made during the course of this project is that I was a
 
 ## For other researchers
 
-The main You can see all the code I used to do this analysis here:
+This project was done as an Insight Data Science project in consultation with Sage Bionetworks. The main deliverables for Sage are a body of code for analyzing the mPower memory data, as well as a summary of the analyses (i.e., this blog), for use by other researchers who are interested to use the data. Links to these resources are listed here:
+
+### 1. My code:
+
+### 2. A clean summary:
+You can see all the code I used to do this analysis here:
 
 [An ipython notebook that summarizes my analyses](http://github.com/mattoby/mpower_memory/blob/master/Memory_summary_analyses.ipynb "overview notebook")
 
