@@ -118,17 +118,26 @@ A troubling observation I made during the course of this project is that I was a
 
 ## For other researchers
 
-This project was done as an Insight Data Science project in consultation with Sage Bionetworks. The main deliverables for Sage are a body of code for analyzing the mPower memory data, as well as a summary of the analyses (i.e., this blog), for use by other researchers who are interested to use the data. Links to these resources are listed here:
+This project was done as an Insight Data Science project in consultation with Sage Bionetworks. The main deliverables for Sage are a body of code for analyzing the mPower memory data, as well as a summary of the analyses (i.e., this blog), for use by other researchers who are interested to use the data. Links to these resources, as well as other related resources for interested researchers, are listed here:
 
 ### 1. My code:
 
-### 2. A clean summary:
+All of the code I wrote for this project is available in my mpower_memory repo on github. The project was done 
+
+### 2. A clean summary of my analysis:
+
+
 You can see all the code I used to do this analysis here:
+
 
 [An ipython notebook that summarizes my analyses](http://github.com/mattoby/mpower_memory/blob/master/Memory_summary_analyses.ipynb "overview notebook")
 
+### 3. Accessing the mPower memory game data:
 
 The data from the memory test is held in Synapse, Sage's web portal for data. Anyone can access it if they sign up for a Synapse account and go through a certification procedure. Once a user is certified, they can access the data from the memory test here: [mPowerSynapse](http://www.synapse.org/#!Synapse:syn4993293/wiki/ "mPower study data")
+
+
+
 
 
 Partnered with ![sage_logo.jpg]({{site.baseurl}}/images/sage_logo.jpg) and ![mpowerparkinsons.svg]({{site.baseurl}}/images/mpowerparkinsons.svg) mPower
