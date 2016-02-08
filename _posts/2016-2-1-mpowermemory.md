@@ -14,6 +14,7 @@ published: true
 
 
 
+
 Healthcare is changing rapidly. The old model of tracking patients through sporadic doctor's visits is becoming antiquated with the enormous innovations in social media, mobile phone technology, and integration of data that have transformed so many fields. These platforms are only now being adopted for tracking patient wellness, but are rapidly meeting the expectations through initiatives such as the Apple ResearchKit, which was published last year. 
 
 Using the new [Apple ResearchKit](http://www.apple.com/researchkit/ "iphone researchkit") technology, Sage Bionetworks has initiated a project called [mPower](http://parkinsonmpower.org/ "Mpower Parkinson's Site"), intended to produce apps to track different diseases, in the hopes of overhauling the model of healthcare tracking and move it to a more dynamic system commesurate with today's hi-tech world. 
@@ -70,6 +71,7 @@ From each user session, the memory game tracks an overall 'memory score' (denoti
 
 The first thing I did is looked at how the memory game score correlates with users having Parkinson's. It turned out, this score, taken alone, is not tremendously informative about disease status.
 
+![memoryscorehist.png]({{site.baseurl}}/images/memoryscorehist.png)
 
 
 ![gamescorehist.png]({{site.baseurl}}/images/gamescorehist.png)
