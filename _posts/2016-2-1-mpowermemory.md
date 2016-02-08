@@ -109,9 +109,7 @@ There are two striking observations to be made from the distribution of these co
 
 2. The memory score very little predictive power. It is nearly last in the ranking of feature importances (note, negative coefficients denote importance as well -- so memory score, having a coefficient near zero, is one of the least informative features in the list). I found that the model's predictiveness is not affected by removal of the memory score.
 
-I confirmed these observations by removing 
-
-I also found, troublingly, that 
+I did found, troublingly, that a logistic regression model composed of only the demographic features of age, education level, and gender, and containing no features whatsoever derived from the memory game, predicts whether a user has Parkinson's with an Area under the curve of 0.81 -- about equally well as my model. This is obviously not right, and betrays a strong bias in the demographic distribution of the data (see my previous discussion about resampling). To avoid contaminating my models, I excluded these demographic features outright. Given a more demographically balanced dataset (which might exist in the future when many more people have played the memory game), age and education level would likely be highly useful features.
 
 ##  Challenges with uncontrolled sampling
 
