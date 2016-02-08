@@ -119,7 +119,7 @@ At first glance, the distribution of reaction times (i.e., the length of time be
 
 A question that I wanted to explore, going beyond whether a user has Parkinson's, is predicting for a given patient if his or her medicine is working. This hits a fundamental motivation for the mPower study, which is to do better patient tracking in between sparse doctor visits. I tried a few approaches to get at this question, including building models that classify medicated versus non-medicated game records for individual patients, as well as building a model that tries to class records into medicated versus non-medicated categories across all patients. I also did some preliminary modeling to see if I could predict the number of years that a patient had Parkinson's, the number of years they have been non-medicated, and whether they have had surgery or brain stimulation therapy. None of these analyses returned promising results. 
 
-One key source of data that could help future researchers answer these questions is the [International Parkinson and Movement Disorder Society's Unified Parkinson's Disease Rating Scale (MDS-UPDRS) survey](http://www.movementdisorders.org/MDS/Education/Rating-Scales.htm "rating scale surveys"), a professional health assessment designed 
+One key source of data that could help future researchers answer these questions is the [International Parkinson and Movement Disorder Society's](http://www.movementdisorders.org/MDS/Education/Rating-Scales.htm "rating scale surveys") Unified Parkinson's Disease Rating Scale (MDS-UPDRS) survey, a professional health assessment designed 
 hurt by lack of udpdrs data... hard ot do thing.
 
 ##  Challenges with uncontrolled sampling
