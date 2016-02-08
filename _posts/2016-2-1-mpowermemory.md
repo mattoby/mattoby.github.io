@@ -113,8 +113,7 @@ I found these observations very interesting. To follow up, I took a look at the 
 
 ![distance_and_dt_dists.png]({{site.baseurl}}/images/distance_and_dt_dists.png)
 
-
-I was surprised, on the other hand, that the distribution of reaction times (i.e., the length of time before the first tap in a given game) did not vary strongly between Parkinson's from non-Parkinson's patients. However, as can be seen in the plot below, there are a handful of Parkinson's patients with excessively long reaction times, and 
+I was surprised that the main distribution of reaction times (i.e., the length of time before the first tap in a given game) did not vary strongly between Parkinson's and non-Parkinson's patients. However, as the histograms show, there are a handful of Parkinson's patients with excessively long reaction times, and thus reaction time is still a useful feature in the predictive model. 
 
 
 ##  Challenges with uncontrolled sampling
