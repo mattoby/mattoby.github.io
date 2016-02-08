@@ -85,14 +85,12 @@ With this in mind, I calculated from the raw data the distance between each 'suc
 
 ![featureengineering1.png]({{site.baseurl}}/images/featureengineering1.png)
 
-I split the touch timings into two types of features. First, I tracked the 'reaction time', i.e., the time before first touch in each game. Next, I averaged the time between each pair of touches after the first one, to get an averaged time between touches. These features, along with the game score, formed my feature set for predicting the health status of people who played the memory game.
+I split the touch timings into two types of features. First, I tracked the 'reaction time', i.e., the time before first touch in each game. Next, I averaged the time between each pair of touches after the first one, to get an averaged time between touches. I aggregated each of these features separately for plays of the 2x2 game, the 3x3 game, and the 4x4 game, since the games differ considerably in difficulty. These features, along with the game score, formed my feature set for predicting the health status of people who played the memory game.
 
-, which I aggregated separately for plays of the 2x2 game, the 3x3 game, and the 4x4 game, since they differ considerably in difficulty. 
-
-
-##  Predicting Parkinson's with a random forest model
+##  Predicting Parkinson's
 
 I also found, troublingly, that 
+
 ##  Challenges with uncontrolled sampling
 
 ## For other researchers
