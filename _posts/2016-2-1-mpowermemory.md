@@ -50,9 +50,6 @@ It was important to account for these distributions in some way in order to get 
 
 the recotaking the mean values of features reducing the records for each patient down to 
 
-
-![inthedata1.png]({{site.baseurl}}/images/inthedata1.png)
-
 The first thing I did is looked at how the memory game score correlates with users having Parkinson's. It turned out, this score, taken alone, is not very informative.
 
 ![gamescorehist.png]({{site.baseurl}}/images/gamescorehist.png)
