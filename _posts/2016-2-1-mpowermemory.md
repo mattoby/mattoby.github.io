@@ -111,7 +111,8 @@ There are two striking observations to be made from the distribution of these co
 
 I found these observations very interesting. To follow up, I took a look at the distribution of Parkinson's and non-Parkinson's scores on some of the most informative features that came out of my analysis. Unlike the memory score, it is clear that the timing between taps say something about whether a user has Parkinson's.
 
-![meantimebwtaps_dists.png]({{site.baseurl}}/images/meantimebwtaps_dists.png)
+![distance_and_dt_dists.png]({{site.baseurl}}/images/distance_and_dt_dists.png)
+
 
 I was surprised, on the other hand, that the distribution of reaction times (i.e., the length of time before the first tap in a given game) did not vary strongly between Parkinson's from non-Parkinson's patients. However, as can be seen in the plot below, there are a handful of Parkinson's patients with excessively long reaction times, and 
 
