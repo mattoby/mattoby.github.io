@@ -109,9 +109,15 @@ There are two striking observations to be made from the distribution of these co
 
 2. The memory score very little predictive power. It is nearly last in the ranking of feature importances (note, negative coefficients denote importance as well -- so memory score, having a coefficient near zero, is one of the least informative features in the list). I found that the model's predictiveness is not affected by removal of the memory score.
 
-I did found, troublingly, that a logistic regression model composed of only the demographic features of age, education level, and gender, and containing no features whatsoever derived from the memory game, predicts whether a user has Parkinson's with an Area under the curve of 0.81 -- about equally well as my model. This is obviously not right, and betrays a strong bias in the demographic distribution of the data (see my previous discussion about resampling). To avoid contaminating my models, I excluded these demographic features outright. Given a more demographically balanced dataset (which might exist in the future when many more people have played the memory game), age and education level would likely be highly useful features.
+I found these observations very interesting. To follow up, I took a look at the distribution of Parkinson's and non-Parkinson's scores on some of the most informative features that came out of my analysis. Unlike the memory score, which I highlighted above, it is clear from the
+
 
 ##  Challenges with uncontrolled sampling
+
+I did found, troublingly, that a logistic regression model composed of only the demographic features of age, education level, and gender, and containing no features whatsoever derived from the memory game, predicts whether a user has Parkinson's with an Area under the curve of 0.81 -- even better than my model trained from the memory game. This is obviously not right, and betrays a strong bias in the demographic distribution of the data (see my previous discussion about resampling). To avoid contaminating my models, I excluded all of these demographic features outright. However, given a more demographically balanced dataset (which might exist in the future when many more people have played the memory game), education level and especially age would likely become useful to be added to a model as interaction terms.
+
+
+
 
 ## For other researchers
 
