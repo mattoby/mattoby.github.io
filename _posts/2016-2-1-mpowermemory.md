@@ -32,7 +32,7 @@ First, the user is prompted about whether they recently took their Parkinson's m
 
 The game gets quite hard when it gets into 4x4 mode, and you have to track 3, then 4, then 5 flowers. But don't take my word for it -- if you have an iphone, [try it yourself](https://itunes.apple.com/us/app/parkinson-mpower-study-app/id972191200?mt=8 "mpower on itunes"). It will be for a good cause. non-Parkinson's patients are important in this study too, as they provide a baseline for comparison. 
 
-##  What can a memory test tell us about Parkinson's?
+##  What can a memory test say about Parkinson's?
 
 Memory is affected in Parkinson's, but usually in late stages of the disease. The more common symptoms, which affect nearly all Parkinson's patients, all involve degradation of motor abilities. Motor symptoms of Parkinson's include tremors, slowness of movement, rigidity, and instability in walking and balancing. Since these symptoms are more ubiquitious among patients than memory issues, it is unclear if a test of memory will be informative. Therefore, my tasks in this project were twofold:
 
@@ -59,7 +59,7 @@ The next issue I had to contend with was a large difference in the distribution 
 
 Beyond this rough age matching, I toyed around with resampling the non-Parkinson's patients to better match the distribution of ages of the Parkinson's patients. However, I did not proceed with this approach, as it required me cutting out more users than I was willing to for the sake of clean data. When many more users have played the memory game, I believe that better age matching using this sort of a resampling approach may become prudent. 
 
-##  Squeezing feature juice
+##  Feature juice
 
 From each user session, the memory game tracks an overall 'memory score' (denoting accuracy in touching the flowers), as well as a detailed record of screen taps during gameplay. There is also a record of whether the user is currently on medication, based on self reporting. Aside from this, I had available each user's disease status, as well as some demographic information.
 
