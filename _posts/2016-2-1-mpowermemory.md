@@ -12,6 +12,7 @@ published: true
 
 
 
+
 Healthcare is changing rapidly. The old model of tracking patients through sporadic doctor's visits is becoming antiquated with the enormous innovations in social media, mobile phone technology, and integration of data that have transformed so many fields. These platforms are only now being adopted for tracking patient wellness, but are rapidly meeting the expectations through initiatives such as the Apple ResearchKit, which was published last year. 
 
 Using the new [Apple ResearchKit](http://www.apple.com/researchkit/ "iphone researchkit") technology, Sage Bionetworks has initiated a project called [mPower](http://parkinsonmpower.org/ "Mpower Parkinson's Site"), intended to produce apps to track different diseases, in the hopes of overhauling the model of healthcare tracking and move it to a more dynamic system commesurate with today's hi-tech world. 
@@ -48,6 +49,7 @@ The next issue I had to contend with was a large difference in the distribution 
 
 ![agehists.png]({{site.baseurl}}/images/agehists.png)
 
+Beyond this rough age matching, I toyed around with resampling the non-Parkinson's patients to better match the distribution of ages of the Parkinson's patients. However, I did not proceed with this approach, as it caused me to cut out more users for the sake of clean data than I was willing to. When many more users have played the memory game, I believe that better age matching will be a good approach in order to boost model predictiveness. 
 
 The first thing I did is looked at how the memory game score correlates with users having Parkinson's. It turned out, this score, taken alone, is not very informative.
 
