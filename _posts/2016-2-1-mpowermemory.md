@@ -120,7 +120,7 @@ During my time at Insight, I've found it gratifying to work on an important prob
 
 ## Accessing the code and data
 
-I did this project as an Insight Data Science fellow, in consultation with Sage Bionetworks. The main deliverables for Sage are a body of code for analyzing the mPower memory data, as well as a summary of the analyses (i.e., this blog), for use by other researchers who are interested to use the data. Links to these resources, as well as other related resources for interested researchers, are listed here:
+I did this project as an Insight Data Science fellow, as a consulting project for Sage Bionetworks. The main deliverables for Sage are a body of code for analyzing the mPower memory data, as well as a summary of the analyses (i.e., this blog), for use by other researchers who are interested to use the data. Links to these resources, as well as other related resources for interested researchers, are listed here:
 
 ### 1. My code:
 
