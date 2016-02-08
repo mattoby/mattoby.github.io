@@ -117,7 +117,10 @@ At first glance, the distribution of reaction times (i.e., the length of time be
 
 ## Do the meds work?
 
-A question that I wanted to explore, going beyond whether a user has Parkinson's, is predicting for a given patient if his or her medicine is working. This hits a fundamental motivation for the mPower study, which is to do better patient tracking in between sparse doctor visits. I tried a few approaches to get at this question, including grouping all records where a patient took medicine 
+A question that I wanted to explore, going beyond whether a user has Parkinson's, is predicting for a given patient if his or her medicine is working. This hits a fundamental motivation for the mPower study, which is to do better patient tracking in between sparse doctor visits. I tried a few approaches to get at this question, including building models that classify medicated versus non-medicated game records for individual patients, as well as a model that tries to class records into medicated versus non-medicated categories across all patients. I also did some preliminary modeling to see if I could predict the number of years that a patient had Parkinson's, the number of years they have been non-medicated, and whether they have had surgery or brain stimulation therapy. None of these analyses returned promising results. 
+
+
+comparing and all records where a patient did not
 
 predicting whether a patient took or didn't take his or her meds   but my preliminary analyses 
 
