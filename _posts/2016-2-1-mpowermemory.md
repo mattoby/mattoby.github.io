@@ -69,6 +69,11 @@ The game outputs a 'game score', which is intended to assess memory. I also had 
 
 ![mpower_data_overview.png]({{site.baseurl}}/images/mpower_data_overview.png)
 
+| Tables        | Are           | Cool  |
+| ------------- |:-------------:| -----:|
+| col 3 is      | right-aligned | $1600 |
+| col 2 is      | centered      |   $12 |
+| zebra stripes | are neat      |    $1 |
 
 
 
