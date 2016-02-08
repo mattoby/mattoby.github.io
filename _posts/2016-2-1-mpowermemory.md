@@ -91,6 +91,10 @@ I split the touch timings into two types of features. First, I tracked the 'reac
 
 ##  Predicting Parkinson's
 
+![ROCs_allfeatures.png]({{site.baseurl}}/images/ROCs_allfeatures.png)
+
+
+
 I also found, troublingly, that 
 
 ##  Challenges with uncontrolled sampling
