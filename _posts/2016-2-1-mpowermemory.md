@@ -113,15 +113,21 @@ I found these observations very interesting. To follow up, I took a look at the 
 
 ![distance_and_dt_dists.png]({{site.baseurl}}/images/distance_and_dt_dists.png)
 
-I was surprised that the main distribution of reaction times (i.e., the length of time before the first tap in a given game) did not vary strongly between Parkinson's and non-Parkinson's patients. However, as the histograms show, there are a handful of Parkinson's patients with excessively long reaction times, and thus reaction time is still a useful feature in the predictive model. 
+At first glance, the distribution of reaction times (i.e., the length of time before the first tap in a given game) does not seem to vary strongly between Parkinson's and non-Parkinson's patients (see bottom right histogram above). However, as the rug plot demonstrates, there are a handful of Parkinson's patients with excessively long reaction times. In general, these features provide a good starting point for developing better dynamic tracking of patients.
+
+## Do the meds work?
+
+A question that I wanted to explore, going beyond whether a user has Parkinson's, is predicting for a given patient if his or her medicine is working. This hits a fundamental motivation for the mPower study, which is to do better patient tracking in between sparse doctor visits. I tried a few approaches to get at this question, including grouping all records where a patient took medicine 
+
+predicting whether a patient took or didn't take his or her meds   but my preliminary analyses 
+
+if I could develop a simiar 
+hurt by lack of udpdrs data... hard ot do thing.
 
 ##  Challenges with uncontrolled sampling
 
 I did found, troublingly, that a logistic regression model composed of only the demographic features of age, education level, and gender, and containing no features whatsoever derived from the memory game, predicts whether a user has Parkinson's with an Area under the curve of 0.81 -- even better than my model trained from the memory game. This is obviously not right, and betrays a strong bias in the demographic distribution of the data (see my previous discussion about resampling). To avoid contaminating my models, I excluded all of these demographic features outright. However, given a more demographically balanced dataset (which might exist in the future when many more people have played the memory game), education level and especially age would likely become useful to be added to a model as interaction terms.
 
-
-## Attempts to predict if the meds are working
-hurt by lack of udpdrs data... hard ot do thing.
 
 ## For other researchers
 
