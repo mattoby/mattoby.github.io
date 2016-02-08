@@ -91,6 +91,9 @@ I split the touch timings into two types of features. First, I tracked the 'reac
 
 ##  Predicting Parkinson's
 
+I approached the task of classifying users into Parkinson's and non-Parkinson's groups using a logistic regression model. I found that I achieved the best results with little or no regularization, which I speculate is due to a broad spred of information among the features (beyond the few top features that hold most of the information, as seen below). I split my data 70%/30% into training and test sets, and then performed machine learning. As seen in the Receiver Operating Characteristic curves below, my model is able to predict whether users of the memory game have Parkinson's with good accuracy.
+
+
 ![ROCs_allfeatures.png]({{site.baseurl}}/images/ROCs_allfeatures.png)
 
 
