@@ -8,8 +8,6 @@ published: true
 
 
 
-blabla
-
 
 
 
@@ -46,7 +44,9 @@ The mPower app is available for anybody to download and use, and to use as often
 
 It was important to account for these distributions in some way in order to get meaningful results from the data. For example, if I treated each game record as equal in my analyses, a single Parkinson's patient who played the memory game 300 times would have the same weight as 300 individuals who each played the game once. This discrepancy could strongly bias my results in unproductive ways. I handled this distribution issue by using only a single reading per user - either a single random record, or the average for that user over every time they played the memory game. 
 
-The next issue I had to contend with was a large difference in the distribution of ages between Parkinson's and non-Parkinson's patients. There were 
+The next issue I had to contend with was a large difference in the distribution of ages between Parkinson's and non-Parkinson's patients. Below the age of 45, there were practically no Parkinson's patients in the cohort.  While it would be nice to extend my analysis of Parkinson's to young users of the app, it was unrealistic given the data. Therefore, I put a hard cutoff of ages, and only included users 45 years old or older in my analyses.
+
+![agehists.png]({{site.baseurl}}/images/agehists.png)
 
 
 The first thing I did is looked at how the memory game score correlates with users having Parkinson's. It turned out, this score, taken alone, is not very informative.
