@@ -35,11 +35,12 @@ The game gets quite hard when it gets into 4x4 mode, and you have to track 3, th
 ##  What can a memory test tell us about Parkinson's?
 
 Memory is affected in Parkinson's, but usually in late stages of the disease. The more common symptoms, which affect nearly all Parkinson's patients, all involve degradation of motor abilities. Motor symptoms of Parkinson's include tremors, slowness of movement, rigidity, and instability in walking and balancing. Since these symptoms are more ubiquitious among patients than memory issues, it is unclear if a test of memory will be informative. Therefore, my tasks in this project were twofold:
+---
 
 1. Build a predictor of which patients have Parkinson's.
 
 2. Determine which features are the most predictive of disease state.
-
+---
 ##  A peek at the data
 
 The mPower app is available for anybody to download and use, and to use as often as they wish. As a result, unlike in a controlled clinical trial, there are no restrictions on the number of times a user may play the memory game. Therefore, many users played the memory game only once or twice, while a few users played it dozens or hundreds of times. These highly uneven distributions can be seen in the histograms below:
