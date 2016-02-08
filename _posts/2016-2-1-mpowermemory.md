@@ -73,13 +73,20 @@ The first thing I did is looked at how the memory game score correlates with use
 
 ![memoryscorehist.png]({{site.baseurl}}/images/memoryscorehist.png)
 
-Therefore, I turned to the game records themselves. In these raw records, I had access to the regions considered 'correct' to touch for each flower, the order in which the flowers lit up, and the location and time of each touch by the user.
+Therefore, I turned to the game records themselves. In these raw records, I had access to the regions considered correct to touch for each flower, the order in which the flowers lit up, and the location and time of each touch by the user.
 
-As I mentioned before, Parkinson's is primarily a disease of the motor system. Therefore, I hypothesized that there were two groups of features that I could extract from the memory game, which 
+As I mentioned before, Parkinson's is primarily a disease of the motor system. Therefore, I hypothesized that there could be two new groups of features, aside from memory-based features like the game score, which might be informative:
 
-I modeled these data as shown in the figure, calculating from these raw data the distance between each 'successful' touch and the center of the flower. This 'touch distance' might indicate an inability of users to hold their hands steady. I also extracted the timing of touches, which I split into two types of features. First, I tracked the time before first touch in each game, i.e., the latency. Next, I averaged the time between each pair of touches after the first one, for a mean touch delay. I aggregated these features separately for plays of the 2x2 game, the 3x3 game, and the 4x4 game, since they differ considerably in difficulty. These features, along with the game score, formed my feature set for predicting the health status of people who played the memory game.
+1. Features having to do with time delay between touches, which could indicate _Bradykinesia_ (slowness of movement) or _Akinesia_ (difficulty initiating movements). 
+
+2. Features having to do with the distance between the intended targets and actual screen taps, which could indicate _Dyskinesia_ (difficulty of controlling movement, e.g., with tremor). 
+
+With this in mind, I calculated from the raw data the distance between each 'successful' touch and the center of the intended flower, as well as the time delays between touches and also before the first touch.
 
 ![featureengineering1.png]({{site.baseurl}}/images/featureengineering1.png)
+
+The 'touch distance' might indicate an inability of users to hold their hands steady (i.e., tremor), while the time between touches might indicate  . I also extracted the timing of touches, which I split into two types of features. First, I tracked the time before first touch in each game, i.e., the latency. Next, I averaged the time between each pair of touches after the first one, for a mean touch delay. I aggregated these features separately for plays of the 2x2 game, the 3x3 game, and the 4x4 game, since they differ considerably in difficulty. These features, along with the game score, formed my feature set for predicting the health status of people who played the memory game.
+
 
 ##  Predicting Parkinson's with a random forest model
 
