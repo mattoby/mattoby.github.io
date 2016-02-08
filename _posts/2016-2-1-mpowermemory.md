@@ -85,7 +85,9 @@ With this in mind, I calculated from the raw data the distance between each 'suc
 
 ![featureengineering1.png]({{site.baseurl}}/images/featureengineering1.png)
 
-The 'touch distance' might indicate an inability of users to hold their hands steady (i.e., tremor), while the time between touches might indicate  . I also extracted the timing of touches, which I split into two types of features. First, I tracked the time before first touch in each game, i.e., the latency. Next, I averaged the time between each pair of touches after the first one, for a mean touch delay. I aggregated these features separately for plays of the 2x2 game, the 3x3 game, and the 4x4 game, since they differ considerably in difficulty. These features, along with the game score, formed my feature set for predicting the health status of people who played the memory game.
+I split the touch timings into two types of features. First, I tracked the 'reaction time', i.e., the time before first touch in each game. Next, I averaged the time between each pair of touches after the first one, to get an averaged time between touches. These features, along with the game score, formed my feature set for predicting the health status of people who played the memory game.
+
+, which I aggregated separately for plays of the 2x2 game, the 3x3 game, and the 4x4 game, since they differ considerably in difficulty. 
 
 
 ##  Predicting Parkinson's with a random forest model
