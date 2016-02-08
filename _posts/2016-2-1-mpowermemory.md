@@ -109,7 +109,8 @@ There are two striking observations to be made from the distribution of these co
 
 2. The memory score very little predictive power. It is nearly last in the ranking of feature importances (note, negative coefficients denote importance as well -- so memory score, having a coefficient near zero, is one of the least informative features in the list). I found that the model's predictiveness is not affected by removal of the memory score.
 
-I found these observations very interesting. To follow up, I took a look at the distribution of Parkinson's and non-Parkinson's scores on some of the most informative features that came out of my analysis. Unlike the memory score, which I highlighted above, it is clear from the
+I found these observations very interesting. To follow up, I took a look at the distribution of Parkinson's and non-Parkinson's scores on some of the most informative features that came out of my analysis. Unlike the memory score, it is clear that some of these features say something about whether a user has Parkinson's.
+
 
 
 ##  Challenges with uncontrolled sampling
