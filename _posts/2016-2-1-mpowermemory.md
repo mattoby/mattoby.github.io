@@ -74,11 +74,6 @@ In the raw gameplay records, I had access to the regions considered 'correct' to
 
 ##  Predicting Parkinson's with a random forest model
 
-![model1_roc.png]({{site.baseurl}}/images/model1_roc.png)
-
-![model1_stats.png]({{site.baseurl}}/images/model1_stats.png)
-
-![model1_featureimportances.png]({{site.baseurl}}/images/model1_featureimportances.png)
 
 ##  Challenges with uncontrolled sampling
 
