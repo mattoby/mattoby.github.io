@@ -5,7 +5,6 @@ published: true
 ---
 
 
-Click [here](bit.ly/mpowermemory "demoslides") to see my short presentation on this research for Insight!
 
 Healthcare is changing rapidly. The old model of tracking patients through sporadic doctor's visits is becoming antiquated with the enormous innovations in social media, mobile phone technology, and integration of data that have transformed so many fields. These platforms are only now being adopted for tracking patient wellness, but are rapidly meeting the expectations through initiatives such as the Apple ResearchKit, which was published last year. 
 
@@ -128,7 +127,11 @@ All of the code I wrote for this project is freely available in [my mpower_memor
 
 I have provided in my github repo for the project a clean Ipython notebook containing the key analyses presented in this blog, which other researchers are free to look at and use. It can be found [here](https://github.com/mattoby/mpower_memory/blob/master/Memory_summary_analyses.ipynb "overview notebook").
 
-### 3. Accessing the mPower memory game data:
+### 3. My Insight demo presentation:
+
+Click [here](bit.ly/mpowermemory "demoslides") to see my short demo presentation on this research!
+
+### 4. Accessing the mPower memory game data:
 
 The data from the memory test is held in Synapse, Sage Bionetwork's web portal for data. Anyone can access it if they sign up for a Synapse account and go through a certification procedure. Once a user is certified, they can access the data from the memory test here: [mPowerSynapse](http://www.synapse.org/#!Synapse:syn4993293/wiki/ "mPower study data")
 
