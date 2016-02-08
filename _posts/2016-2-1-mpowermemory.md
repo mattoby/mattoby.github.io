@@ -120,7 +120,7 @@ I was surprised that the main distribution of reaction times (i.e., the length o
 I did found, troublingly, that a logistic regression model composed of only the demographic features of age, education level, and gender, and containing no features whatsoever derived from the memory game, predicts whether a user has Parkinson's with an Area under the curve of 0.81 -- even better than my model trained from the memory game. This is obviously not right, and betrays a strong bias in the demographic distribution of the data (see my previous discussion about resampling). To avoid contaminating my models, I excluded all of these demographic features outright. However, given a more demographically balanced dataset (which might exist in the future when many more people have played the memory game), education level and especially age would likely become useful to be added to a model as interaction terms.
 
 
-
+## Attempts to predict if the meds are working
 
 
 ## For other researchers
