@@ -116,7 +116,7 @@ One key source of data that could help future researchers answer these questions
 A troubling observation I made during the course of this project is that I was able to predict whether a patient has Parkinson's disease with good accuracy by knowing only his or her gender, education level, and age. Since these predictions contained no features whatsoever derived from the memory game, they are highly suspect, and betray a bias due to uneven demographics of patients playing the game, rather than any helpful signal that would be predictive for patients at large (see also my previous discussion about resampling). To avoid contaminating my models with these biased features, I excluded all of these demographic features outright. Therefore, no demographic features are included in the analyses presented above. However, given a more demographically balanced dataset (which might exist in the future when many more people have played the memory game, and demographic balancing is possible via resampling), education level and especially age would likely become useful to be added to a model, and potentially to include as interaction terms with some of the other features.
 
 
-## For other researchers
+## Accessing the code and data
 
 This project was done as an Insight Data Science project in consultation with Sage Bionetworks. The main deliverables for Sage are a body of code for analyzing the mPower memory data, as well as a summary of the analyses (i.e., this blog), for use by other researchers who are interested to use the data. Links to these resources, as well as other related resources for interested researchers, are listed here:
 
@@ -128,15 +128,9 @@ All of the code I wrote for this project is freely available in [my mpower_memor
 
 I have provided in my github repo for the project a clean Ipython notebook containing the key analyses presented in this blog, which other researchers are free to look at and use. It can be found [here](https://github.com/mattoby/mpower_memory/blob/master/Memory_summary_analyses.ipynb "overview notebook").
 
-
-[An ipython notebook that summarizes my analyses](http://github.com/mattoby/mpower_memory/blob/master/Memory_summary_analyses.ipynb "overview notebook")
-
 ### 3. Accessing the mPower memory game data:
 
-The data from the memory test is held in Synapse, Sage's web portal for data. Anyone can access it if they sign up for a Synapse account and go through a certification procedure. Once a user is certified, they can access the data from the memory test here: [mPowerSynapse](http://www.synapse.org/#!Synapse:syn4993293/wiki/ "mPower study data")
-
-
-
+The data from the memory test is held in Synapse, Sage Bionetwork's web portal for data. Anyone can access it if they sign up for a Synapse account and go through a certification procedure. Once a user is certified, they can access the data from the memory test here: [mPowerSynapse](http://www.synapse.org/#!Synapse:syn4993293/wiki/ "mPower study data")
 
 
 Partnered with ![sage_logo.jpg]({{site.baseurl}}/images/sage_logo.jpg) and ![mpowerparkinsons.svg]({{site.baseurl}}/images/mpowerparkinsons.svg) mPower
