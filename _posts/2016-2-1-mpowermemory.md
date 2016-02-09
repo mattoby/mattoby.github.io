@@ -116,7 +116,7 @@ A troubling observation I made during the course of this project is that I was a
 
 ## Conclusions
 
-During my time at Insight, I've found it gratifying to work on an important problem with a real dataset that can hopefully make an impact on real lives of people with Parkinson's. Contributing to a much-needed paradigm shift in patient tracking, and learning many new data science tools along the way, has been an exhilarating ride. It is my hope that the insights I developed here will be put into use as patient tracking shifts more and more onto mobile.
+During my time at Insight, I've found it gratifying to work on an important problem that can hopefully make an impact on the lives of people with Parkinson's. Contributing to a much-needed paradigm shift in patient tracking, and learning many new data science tools along the way, has been an exhilarating ride. It is my hope that the insights I developed here will be put into use as patient tracking shifts more and more onto mobile.
 
 ## Accessing the code and data
 
