@@ -6,6 +6,7 @@ published: true
 
 
 
+
 Healthcare is changing rapidly. The current model of tracking chronic disease patients through sporadic doctor's visits is poised to becoming antiquated with the enormous innovations in social media, mobile phone technology, and integration of data that have transformed so many fields. These platforms are now being adopted for tracking patient wellness, and are poised to shake up the status quo for how disease is tracked and treated. 
 
 This change is being catalyzed in part through initiatives such as the [Apple ResearchKit](http://www.apple.com/researchkit/ "iphone researchkit"), a set of tools published last year that allow researchers to build health related apps on Apple mobile phones. Capitalizing on this technology, the Seattle-based non-profit Sage Bionetworks has initiated a number of projects to track disease progress through mobile apps. These projects have been designed in the hopes of providing proof of principle for new ways to track chronic diseases, and to encourage a shift to more dynamic patient tracking that is commesurate with today's hi-tech world. 
@@ -102,7 +103,7 @@ These observations were very interesting. To follow up, I took a look at the dis
 
 ![distance_and_dt_dists.png]({{site.baseurl}}/images/distance_and_dt_dists.png)
 
-At first glance, the distribution of reaction times (i.e., the length of time before the first tap in a given game) does not seem to vary strongly between Parkinson's and non-Parkinson's patients (see bottom right histogram above). However, as the rug plot demonstrates, there are a handful of Parkinson's patients with excessively long reaction times. In general, these features provide a good starting point for developing better dynamic tracking of patients.
+At first glance, the distribution of reaction times (i.e., the length of time before the first tap in a given game) does not seem to vary strongly between Parkinson's and non-Parkinson's patients (see bottom right histogram above). However, as the rug plot demonstrates, there are a handful of Parkinson's patients with excessively long reaction times. Despite this, reaction time actually has a negative coefficient for prediction - longer reaction times tend to indicate non-Parkinson's, unlike the trend for mean time between taps. This is surprising, and deserves more attention in future analysis. 
 
 ## Do the meds work?
 
