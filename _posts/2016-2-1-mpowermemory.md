@@ -91,6 +91,8 @@ As seen in the Receiver Operating Characteristic curves below, my model is able 
 
 Logistic regression calculates coefficients for each feature, which can be interpreted as relative importances of the features for doing the classification (i.e., for predicting whether a game user has Parkinson's). Looking at these coefficients can give a lot of insight into what a model is doing. 
 
+![feature_coeffs.png]({{site.baseurl}}/images/feature_coeffs.png)
+
 ![feature_importances_allfeatures.png]({{site.baseurl}}/images/feature_importances_allfeatures.png)
 
 There are two striking observations to be made from the distribution of these coefficients: 
