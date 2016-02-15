@@ -103,6 +103,9 @@ There are two striking observations to be made from the distribution of these co
 
 These observations were very interesting. To follow up, I took a look at the distribution of Parkinson's and non-Parkinson's scores on some of the most informative features that came out of my analysis. Unlike the memory score, it is clear that the timing between taps say something about whether a user has Parkinson's.
 
+![feature_plots_3x2.png]({{site.baseurl}}/images/feature_plots_3x2.png)
+
+
 ![distance_and_dt_dists.png]({{site.baseurl}}/images/distance_and_dt_dists.png)
 
 At first glance, the distribution of reaction times (i.e., the length of time before the first tap in a given game) does not seem to vary strongly between Parkinson's and non-Parkinson's patients (see bottom right histogram above). However, as the rug plot demonstrates, there are a handful of Parkinson's patients with excessively long reaction times. Despite this, reaction time actually has a negative coefficient for prediction - longer reaction times tend to indicate non-Parkinson's, unlike the trend for mean time between taps. This is surprising, and deserves more attention in future analysis. 
