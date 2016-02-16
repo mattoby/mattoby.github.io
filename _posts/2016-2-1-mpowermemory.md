@@ -7,6 +7,7 @@ published: true
 
 
 
+
 Healthcare is changing rapidly. The current model of tracking chronic disease patients through sporadic doctor's visits will soon become antiquated with the enormous innovations in social media, mobile phone technology, and integration of data that have transformed so many fields. These platforms are now being adopted in patient wellness, and are shaking up the status quo for how disease is tracked and treated. 
 
 This change is being catalyzed in part through initiatives such as the [Apple ResearchKit](http://www.apple.com/researchkit/ "iphone researchkit"), a set of tools published last year that allow researchers to build health related apps on Apple mobile phones. Capitalizing on this technology, the Seattle-based non-profit Sage Bionetworks has initiated a number of projects to track disease progress through mobile apps. These projects have been designed in the hopes of providing proof of principle for new ways to track chronic diseases, and to encourage a shift to more dynamic patient tracking that is commesurate with today's hi-tech world. 
@@ -151,7 +152,7 @@ I have provided in my github repo for the project a clean Ipython notebook conta
 
 ### 3. My Insight demo presentation:
 
-Click [here](http://bit.ly/mpowermemory) to see my short Insight demo presentation on this work!
+Click [here](http://bit.ly/memorypowerslides) to see my short Insight demo presentation on this work!
 
 ### 4. Accessing the mPower memory game data:
 
