@@ -150,6 +150,8 @@ I have provided in my github repo for the project a clean Ipython notebook conta
 
 Click [here](http://bit.ly/memorypowerslides) to see my short Insight demo presentation on this work!
 
+<iframe src="https://docs.google.com/presentation/d/11xCpBrL_P5miiOIJqNRy8N9FIPzr-oRRGuLMC3DOIaQ/embed?start=false&loop=false&delayms=60000" frameborder="0" width="480" height="389" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+
 ### 4. Accessing the mPower memory game data:
 
 The data from the memory test is held in Synapse, Sage Bionetwork's web portal for data. Anyone can access it if they sign up for a Synapse account and go through a certification procedure. Once a user is certified, they can access the data from the memory test here: [mPowerSynapse](http://www.synapse.org/#!Synapse:syn4993293/wiki/ "mPower study data"). Note, you will need to register for a Synapse account to see anything at that link.
