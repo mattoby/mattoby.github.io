@@ -89,25 +89,33 @@ As seen in the Receiver Operating Characteristic curves below, my model is able 
 
 ![ROCs_allfeatures.png]({{site.baseurl}}/images/ROCs_allfeatures.png)
 
-Logistic regression calculates coefficients for each feature, which can be interpreted as relative importances of the features for doing the classification (i.e., for predicting whether a game user has Parkinson's). Looking at these coefficients can give a lot of insight into what a model is doing. 
+Logistic regression calculates coefficients for each feature, which can be interpreted as relative importances of the features for doing the classification (i.e., for predicting whether a game user has Parkinson's). Note, negative coefficients denote importance as well, just with a negative weighting. Looking at these coefficients can give a lot of insight into what a model is doing. 
 
 ![feature_coeffs.png]({{site.baseurl}}/images/feature_coeffs.png)
 
-There are two striking observations to be made from the distribution of these coefficients: 
+There are three striking observations to be made from the distribution of these coefficients: 
 
-1. The most informative features by far are the mean times between taps (especially in the 3x3 game, but also in the 4x4 game). I found that removing these features severely reduces predictiveness of the model.
+1. The most informative features by far are the mean times between taps (especially in the 3x3 game, but also in the 4x4 game). I found that removing these features severely reduces predictiveness of the model. Also predictive, although less so, are the mean distances from flower centers.
 
-2. The memory score has very little predictive power. It is nearly last in the ranking of feature importances (note, negative coefficients denote importance as well, just with a negative weighting -- so memory score, having a coefficient near zero, is one of the least informative features in the list). I found that the model's predictiveness is not affected by removal of the memory score.
+2. The memory score has very little predictive power. It is last in the ranking of feature importances, with a coefficient near zero. I found that the model's predictiveness is not affected by removal of the memory score.
 
-These observations were very interesting. To follow up, I took a look at the distribution of Parkinson's and non-Parkinson's scores on some of the most informative features that came out of my analysis. Unlike the memory score, it is clear that the timing between taps say something about whether a user has Parkinson's.
+3. The reaction time, i.e., the time before the first tap in a given gameplay, is actually predictive of Parkinson's in the _opposite_ direction of time between taps. This means that Parkinson's patients tend to click faster than non-Parkinson's patients. More on this in the next section.
+
+These observations were very interesting. To follow up, I took a look at the distribution of Parkinson's and non-Parkinson's scores on some of the most informative features that came out of my analysis. It is clear that, unlike the memory score, these features do hold information about whether a user has Parkinson's.
 
 ![feature_plots_3x2_log.png]({{site.baseurl}}/images/feature_plots_3x2_log.png)
 
 ## The strange case of reaction times
 
-At first glance, the distribution of reaction times (i.e., the length of time before the first tap in a given game) does not seem to vary strongly between Parkinson's and non-Parkinson's patients (see bottom right histogram above). However, as the rug plot demonstrates, there are a handful of Parkinson's patients with excessively long reaction times. 
+Back to observation 3 from the feature importances:
+
+I found it surprising that the reaction times would be faster for Parkinson's patients than for non-Parkinson's patients, so I took a closer look at the data. Here, you'll see the reaction times plotted against the mean time between taps for all patients. Each dot in the plot below is a single patient. 
 
 ![rxntime_vs_meantime.png]({{site.baseurl}}/images/rxntime_vs_meantime.png)
+
+I circled the 
+
+At first glance, the distribution of reaction times (i.e., the length of time before the first tap in a given game) does not seem to vary strongly between Parkinson's and non-Parkinson's patients (see bottom right histogram above). However, as the rug plot demonstrates, there are a handful of Parkinson's patients with excessively long reaction times. 
 
 
 Despite this, reaction time actually has a negative coefficient for prediction - longer reaction times tend to indicate non-Parkinson's, unlike the trend for mean time between taps. This is surprising, and deserves more attention in future analysis. 
