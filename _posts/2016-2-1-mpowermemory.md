@@ -109,30 +109,33 @@ These observations were very interesting. To follow up, I took a look at the dis
 
 Back to observation 3 from the feature importances:
 
-I found it surprising that the reaction times would be faster for Parkinson's patients than for non-Parkinson's patients, so I took a closer look at the data. Here, you'll see the reaction times plotted against the mean time between taps for all patients. Each dot in the plot below is a single patient. 
+I found it surprising that the reaction times would be faster for Parkinson's patients than for non-Parkinson's patients, since Parkinson's disease should slow down reaction times, if anything. Here, you can see the reaction times plotted against the mean time between taps for all patients, where each dot is a single patient:
 
 ![rxntime_vs_meantime.png]({{site.baseurl}}/images/rxntime_vs_meantime.png)
 
-I circled the 
-
-At first glance, the distribution of reaction times (i.e., the length of time before the first tap in a given game) does not seem to vary strongly between Parkinson's and non-Parkinson's patients (see bottom right histogram above). However, as the rug plot demonstrates, there are a handful of Parkinson's patients with excessively long reaction times. 
-
-
-Despite this, reaction time actually has a negative coefficient for prediction - longer reaction times tend to indicate non-Parkinson's, unlike the trend for mean time between taps. This is surprising, and deserves more attention in future analysis. 
+I circled the cohort of Parkinson's patients who had very fast reaction times in the plot above. My hypothesis for why this effect occurs is that it has to do with the wording of the memory game, which never instructs users to tap quickly, but rather, focuses only on a user clicking the correct order of flowers. Non Parkinson's patients, being less anxious about their reaction times in general, might take a longer pause on average before completing the memory task. Careful rewording of the game instructions might remove this anomoly, and highlight more the features that matter most, i.e., the timing and distance from flower centers. 
 
 ## Do the meds work?
 
-The 'bonus' question that I wanted to explore, going beyond whether a user has Parkinson's, is predicting for a given patient if his or her medicine is working. This hits a fundamental motivation for the mPower study, which is to do better patient tracking in between sparse doctor visits. I tried a few approaches to get at this question, including building models that classify medicated versus non-medicated game records for individual patients, as well as building a model that tries to class records into medicated versus non-medicated categories across all patients. I also did some preliminary modeling to see if I could predict the number of years that a patient had Parkinson's, the number of years they have been non-medicated, and whether they have had surgery or brain stimulation therapy. None of these analyses returned promising results. 
+The 'bonus' question that I wanted to explore, going beyond whether a user has Parkinson's, is predicting for a given patient if his or her medicine is working. This hits a fundamental motivation for the mPower study, which is to do better patient tracking in between sparse doctor visits. I tried a few approaches to get at this question, including building models that classify medicated versus non-medicated game records for individual patients, as well as building a model that tries to class records into medicated versus non-medicated categories across all patients. I also did some preliminary modeling to see if I could predict the number of years that a patient had Parkinson's, the number of years they have been non-medicated, and whether they have had surgery or brain stimulation therapy. None of these analyses returned extremely promising results. 
 
 One key source of data that could help future researchers to answer these questions is the [International Parkinson and Movement Disorder Society](http://www.movementdisorders.org/ "MDS")'s Unified Parkinson's Disease Rating Scale (MDS-UPDRS) survey, a professional health assessment designed to determine the severity of a Parkinson patient's disease. The UPDRS data is available on Sage's [public mPower research portal](https://www.synapse.org/#!Synapse:syn4993293/wiki/247859 "synapse mPower"), but requires special certifications that I was not able to obtain in the 3 week timespan of this Insight project. Being able to quantify severity of disease in the patients would add a new, highly informative dimension that might allow future researchers to tease out more from the same data.
 
 ##  A note about uncontrolled sampling
 
-A troubling observation I made during the course of this project is that I was able to predict whether a patient has Parkinson's disease with good accuracy by knowing only his or her gender, education level, and age. Since these predictions contained no features whatsoever derived from the memory game, they are highly suspect, and betray a bias due to uneven demographics of patients playing the game, rather than any helpful signal that would be predictive for patients at large (see also my previous discussion about resampling). To avoid contaminating my models with these biased features, I excluded all of these demographic features outright. Therefore, no demographic features are included in the analyses presented above. However, given a more demographically balanced dataset (which might exist in the future when many more people have played the memory game, and demographic balancing is possible via resampling), education level and especially age would likely become useful features to be added to a model. They might also be informative under those circumstances to include as interaction terms with some of the other features, such as time between clicks.
+A troubling observation I made during the course of this project is that I was able to predict whether a patient has Parkinson's disease with good accuracy by knowing only his or her gender, education level, and age. Since these predictions contained no features whatsoever derived from the memory game, they are highly suspect, and betray a bias due to uneven demographics of patients playing the game, rather than any helpful signal that would be predictive for patients at large (see also my previous discussion about resampling). To avoid contaminating my models with these biased features, I excluded all of these demographic features outright before doing any modeling. Therefore, no demographic features are included in the analyses presented above. However, given a more demographically balanced dataset (which might exist in the future when many more people have played the memory game, and demographic balancing is possible via resampling), education level and especially age would likely become useful features to be added to a model. It might also be informative under those circumstances to include them as interaction terms with some of the other features, such as time between clicks.
 
 ## Conclusions
 
-During my time at Insight, I've found it gratifying to work on an important problem that can hopefully make an impact on the lives of people with Parkinson's. Contributing to a much-needed paradigm shift in patient tracking, and learning many new data science tools along the way, has been an exhilarating ride. It is my hope that the insights I developed here will be put into use as patient tracking shifts more and more towards mobile.
+During my time at Insight, I've found it gratifying to work on an important problem that can hopefully make an impact on the lives of people with Parkinson's. Contributing to a much-needed paradigm shift in patient tracking, and learning many new data science tools along the way, has been an exhilarating ride. The major insights from my work are as follows:
+
+1. The memory score is not a predictive feature for Parkinson's disease. However, timing and distance-from-flower-center features are.  
+
+2. The uneven demographics of the users poses a problem for analysis. Increasing the number of unique players of the memory game, and attempting to attract more non Parkinson's users that match better the demographics (especially age) of the Parkinson's patients, would likely increase the insights that could be drawn from the data.
+
+3. The faster time-before-first-tap of Parkinson's patients suggests a potential problem with the wording of the memory game - future versions of the app might consider looking into the game design to fix this issue.
+
+It is my hope that the insights I developed here will be put into use as patient tracking shifts more and more towards mobile.
 
 ## Accessing the code and data
 
