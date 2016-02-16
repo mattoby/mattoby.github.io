@@ -148,7 +148,7 @@ I have provided in my github repo for the project a clean Ipython notebook conta
 
 ### 3. My Insight demo presentation:
 
-Click [here](http://bit.ly/memorypowerslides) to see my short Insight demo presentation on this work!
+See below my short Insight demo presentation on this work!
 
 <iframe src="https://docs.google.com/presentation/d/11xCpBrL_P5miiOIJqNRy8N9FIPzr-oRRGuLMC3DOIaQ/embed?start=false&loop=false&delayms=60000" frameborder="0" width="480" height="389" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
 
