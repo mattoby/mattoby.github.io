@@ -8,6 +8,7 @@ published: true
 
 
 
+
 Healthcare is changing rapidly. The current model of tracking chronic disease patients through sporadic doctor's visits will soon become antiquated with the enormous innovations in social media, mobile phone technology, and integration of data that have transformed so many fields. These platforms are now being adopted in patient wellness, and are shaking up the status quo for how disease is tracked and treated. 
 
 This change is being catalyzed in part through initiatives such as the [Apple ResearchKit](http://www.apple.com/researchkit/ "iphone researchkit"), a set of tools published last year that allow researchers to build health related apps on Apple mobile phones. Capitalizing on this technology, the Seattle-based non-profit Sage Bionetworks has initiated a number of projects to track disease progress through mobile apps. These projects have been designed in the hopes of providing proof of principle for new ways to manage chronic diseases, and to encourage a shift to more dynamic patient tracking that is commesurate with today's hi-tech world. 
@@ -110,7 +111,7 @@ I found it surprising that the reaction times would be faster for Parkinson's pa
 
 ![rxntime_vs_meantime.png]({{site.baseurl}}/images/rxntime_vs_meantime.png)
 
-I circled the cohort of Parkinson's patients who had very fast reaction times in the plot above. My hypothesis for why this effect occurs is that it has to do with the wording of the memory game, which never instructs users to tap quickly, but rather, focuses only on a user clicking the correct order of flowers. Non Parkinson's patients, being less anxious about their reaction times than Parkinson's patients, might take a longer pause on average to think about their response before completing the memory task. Careful rewording of the game instructions might remove this anomoly, and help to emphasize more the features that matter most, i.e., the timing and distance from flower centers. 
+I circled the cohort of Parkinson's patients who had very fast reaction times in the plot above. My hypothesis for why this effect occurs is that it has to do with the wording of the memory game, which never instructs users to tap quickly, but rather, focuses only on a user clicking the correct order of flowers. Parkinson's patients are likely clicking quickly because they are employing 'compensational strategies', which are techniques that have been developed to overcome the slowed reaction caused by Parkinson's. Non-Parkinson's patients, on the other hand, might tend to take a pause to assemble their response before completing the memory task. Therefore, this feature is likely identifying the subset of Parkinson's patients that are using compensational strategies, which is not fundamentally predictive of the Parkinson's disease state and so is not a desired outcome from the study. Careful rewording of the game instructions might remove this anomoly, and help to emphasize more the features that matter most, i.e., the timing and distance from flower centers. 
 
 ## Do the meds work?
 
