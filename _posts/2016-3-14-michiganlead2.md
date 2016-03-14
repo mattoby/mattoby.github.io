@@ -4,7 +4,6 @@ title: "Exploring lead levels in Michigan"
 published: true
 ---
 
-# Analysis of lead bll levels (Arnhold)
 
 
 ```python
