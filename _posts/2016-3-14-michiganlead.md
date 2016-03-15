@@ -13,7 +13,7 @@ Lead poising has become a highly visible environmental health disaster. In this 
 
 To answer this question you need to collect lead poisoning data for a particular geography (city, state, nation, or globe). The quantity of interest is the blood lead level. You should conduct an exploratory data analysis of the data you collect keeping in mind that you want to use your analysis to make recommendations to others (thus the more granular the data the better). Provide at least one spatial or spatio-temporal visualization of your data.
 
-### My answer
+### My solution
 
 Click below to see my ipython notebook for the Michigan lead data challenge!
 
