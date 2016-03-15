@@ -15,14 +15,18 @@ To answer this question you need to collect lead poisoning data for a particular
 
 ### My solution
 
-Click below to see my ipython notebook for the Michigan lead data challenge!
+Click below to see my ipython notebook for the lead data challenge!
 
 [Michigan lead](https://github.com/mattoby/michigan_lead/blob/master/Arnhold_lead_datachallenge.ipynb)
 
-This code uses a few toolboxes I built, which can be found here:
+My code uses a few toolboxes I built, which can be found here:
 
 [leadtools](https://github.com/mattoby/michigan_lead/blob/master/leadtools.py)
 
 [geotools](https://github.com/mattoby/datasciencetools/blob/master/geotools.py)
 
 [datasciencetools](https://github.com/mattoby/datasciencetools/blob/master/datasciencetools.py)
+
+
+Cheers!
+
