@@ -13,5 +13,7 @@ See my ipython notebook for the Michigan lead data challenge:
 This code uses a few toolboxes I built, which can be found here:
 
 [leadtools](https://github.com/mattoby/michigan_lead/blob/master/leadtools.py)
+
 [geotools](https://github.com/mattoby/datasciencetools/blob/master/geotools.py)
+
 [datasciencetools](https://github.com/mattoby/datasciencetools/blob/master/datasciencetools.py)
