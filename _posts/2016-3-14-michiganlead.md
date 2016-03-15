@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Exploring lead levels in Michigan
+title: Predicting lead levels in Michigan
 published: true
 ---
 
