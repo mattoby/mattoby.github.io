@@ -19,7 +19,7 @@ Click below to see my ipython notebook for the lead data challenge!
 
 [Michigan lead](https://github.com/mattoby/michigan_lead/blob/master/Arnhold_lead_datachallenge.ipynb)
 
-My code leverages a few personal toolboxes, which can be found here:
+The notebook relies on a few code toolboxes, which can be found here:
 
 [leadtools](https://github.com/mattoby/michigan_lead/blob/master/leadtools.py)
 
