@@ -28,5 +28,4 @@ My code uses a few toolboxes I built, which can be found here:
 [datasciencetools](https://github.com/mattoby/datasciencetools/blob/master/datasciencetools.py)
 
 
-Cheers!
 
