@@ -5,7 +5,7 @@ published: true
 ---
 
 
-During my time as a fellow at [Insight Data Science](http://insightdatascience.com/), I've built a number of tools to help with data science tasks such as visualizing and exploring data held in Pandas dataframes, as well as visualizing the outputs of Machine Learning models. 
+During my time as a fellow at [Insight Data Science](http://insightdatascience.com/), I've built a number of tools to help with data science tasks, such as visualizing and exploring data held in Pandas dataframes, as well as visualizing the outputs of Machine Learning models. 
 
 I've made this a public resource on github, in case it is helpful for others. Feel free to use it, but please mention who the code came from if you do!
 
