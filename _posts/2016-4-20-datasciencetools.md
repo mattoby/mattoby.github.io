@@ -17,3 +17,5 @@ I have also written an ipython notebook with usage examples of some of the funct
 
 Enjoy!
 
+-Matthew
+
